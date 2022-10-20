@@ -22,6 +22,8 @@
     - Datasets
         - https://libguides.mskcc.org/artificial_intelligence/datasets
         - http://mridata.org/list
+    - Ideas
+      - http://stanford.edu/class/ee367/Winter2022/projects2022.html
 
 - Github
   - Papers
