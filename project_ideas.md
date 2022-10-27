@@ -14,7 +14,7 @@
   - Project Overview
     - Final goals
   - Milestones and timelines
-    - Intermediate
+    - Intermediate goals
   - References
     - At least 3 scientific references
 
