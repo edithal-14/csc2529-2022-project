@@ -1,3 +1,5 @@
+https://docs.google.com/document/d/1eTyDqG1onTeUFqBHmmsmptLi0dp2C8NSIBOLK4T0jzs/edit
+
 A Deep Cascade of Convolutional Neural Networks for Dynamic MR Image Reconstruction
 
 Work:

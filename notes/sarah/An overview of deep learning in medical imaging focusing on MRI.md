@@ -1,5 +1,6 @@
-An overview of deep learning in medical imaging focusing on MRI
+https://docs.google.com/document/d/1eTyDqG1onTeUFqBHmmsmptLi0dp2C8NSIBOLK4T0jzs/edit
 
+An overview of deep learning in medical imaging focusing on MRI
 
 Overview:
 Key concepts of deep learning for clinical radiologists, including radiomics and imaging genomics. Deep learning in neuroimaging and neuroradiology; brain segmentation; stroke imaging; neuropsychiatric disorders; breast cancer; chest imaging; imaging in oncology; medical ultrasound.
