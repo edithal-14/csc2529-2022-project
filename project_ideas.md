@@ -48,3 +48,4 @@
   - Pix2Pix:    https://phillipi.github.io/pix2pix/
   - Mask R-CNN: https://arxiv.org/abs/1703.06870
   - GAN:        https://arxiv.org/pdf/1611.08408.pdf
+  - DCGAN:      https://arxiv.org/abs/1511.06434

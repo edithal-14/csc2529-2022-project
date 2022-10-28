@@ -1,10 +1,3 @@
 ### Potential topics for project
 
-- Image segmentation using R-CNN
-
-- MRI image reconstruction
-    - Mathematically heavy
-
-- Cancer classification
-
-- Generative Adversial Networks for data augmentation
+ - Google drive link: https://docs.google.com/document/d/11n6yvTUB5JPSX6cTSbpxaIvOC23cDka6LAV-uh1BkEc/edit?usp=sharing
