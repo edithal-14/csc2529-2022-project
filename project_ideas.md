@@ -39,3 +39,12 @@
             - https://github.com/js3611/Deep-MRI-Reconstruction
         - Notes
             - A further investigation should consider how tolerant the network is for different under sampling patterns such as radial and spiral trajectories. As these trajectories provide different properties of aliasing artefact, a further validation is appropriate to determine the flexibility of our approach.
+  - Auto Whole Heart Segmentation from CT images Using an Improved Unet-GAN
+    - https://www.researchgate.net/publication/349544584_Auto_Whole_Heart_Segmentation_from_CT_images_Using_an_Improved_Unet-GAN
+  - GANs to generate synthetic abnormal MRI images with brain tumors
+    - https://www.nature.com/articles/s41598-022-12646-y
+
+- Frameworks
+  - Pix2Pix:    https://phillipi.github.io/pix2pix/
+  - Mask R-CNN: https://arxiv.org/abs/1703.06870
+  - GAN:        https://arxiv.org/pdf/1611.08408.pdf
