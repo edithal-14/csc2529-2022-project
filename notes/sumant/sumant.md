@@ -1,6 +1,6 @@
 # Possible Applications for MRIs
 
-	- Efficiency improvement in radiology
+- Efficiency improvement in radiology
 		- Short-text classification
 	- Gadolinium dosage in contrast-enhanced brain MRI
 	- CLE diagnostics via deep learning (Brain tumor surgery)
@@ -24,16 +24,16 @@
 
 # Object Detection in X-Rays and CTs
 
-	- Lung nodules in chest CTs
+- Lung nodules in chest CTs
 		- [AWEUNet: an attentionaware weight excitation unet for lung nodule segmentation](https://arxiv.org/abs/2110.05144)
 	- Whole heart segmentation from CT images
 		- [Auto whole heart segmentation from CT images using an improved UnetGAN](https://www.researchgate.net/publication/349544584_Auto_Whole_Heart_Segmentation_from_CT_images_Using_an_Improved_Unet-GAN)
 
 # Possible open-source dataset
 
-	- https://openneuro.org/search/modality/mri
+- https://openneuro.org/search/modality/mri
 
 # Synthetic Data Generation
 
-	- GANs to generate synthetic abnormal MRI images with brain tumors
+- GANs to generate synthetic abnormal MRI images with brain tumors
 		- [pix2pix](https://phillipi.github.io/pix2pix)
