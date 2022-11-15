@@ -25,14 +25,21 @@ required. However, due to constraints such as imaging time and privacy concerns,
 Traditional image augmentation methods (rotation, scale, etc.) create highly correlated images which are unable to capture 
 the underlying features of the source images. In addition, they might change the pattern useful for diagnosis. Class 
 imbalance is another reason to apply augmentation. Synthetic data generation is a commonly used approach in the field of 
-medical image analysis since there is no patient data handling or privacy concerns. Generative Adversarial Networks \textbf{(GAN)} have shown promising results in generating synthetic data with good generalization and anonymity on a large variety 
+medical image analysis since there is no patient data handling or privacy concerns. Generative Adversarial Networks \textbf
+{(GAN)} have shown promising results in generating synthetic data with good generalization and anonymity on a large variety 
 of images. We plan to use \textbf{AGGrGAN} \cite{Mukherkjee2022} as it allows us to capture both the unique features of a 
 source image using style transfer, and also the shared information among the different latent representations of multiple 
 images using aggregation.
 
 \section{Related works}
 
-\cite{Mukherkjee2022} Han et al. \cite{Han2018} have applied DCGAN and WGAN separately on the BraTS 2016 dataset to generate artificial MRI scans. To validate their results, they conducted the Visual Turing test with 53\% accuracy for WGAN. Nie et al. \cite{Nie2018} have used Fully Convolutional Network (FCN) as generator and a basic CNN as the discriminator, they have proposed 3D FCN to estimate target image from the corresponding source image, they have used ADNI dataset and have obtained a mean PSNR of 34.1. Emami et al. \cite{Emami2018} have proposed a GAN based model where ResNet is used as the generator and discriminator is a CNN with five convolutional layers which classify the image as real or fake, they achieved a mean PSNR of 26.6 $\pm$ 1.2 for an IRB approved dataset.
+\cite{Mukherkjee2022} Han et al. \cite{Han2018} have applied DCGAN and WGAN separately on the BraTS 2016 dataset to generate 
+artificial MRI scans. To validate their results, they conducted the Visual Turing test with 53\% accuracy for WGAN. Nie et 
+al. \cite{Nie2018} have used Fully Convolutional Network (FCN) as generator and a basic CNN as the discriminator, they have 
+proposed 3D FCN to estimate target image from the corresponding source image, they have used ADNI dataset and have obtained a 
+mean PSNR of 34.1. Emami et al. \cite{Emami2018} have proposed a GAN based model where ResNet is used as the generator and 
+discriminator is a CNN with five convolutional layers which classify the image as real or fake, they achieved a mean PSNR of 
+26.6 $\pm$ 1.2 for an IRB approved dataset.
 
 \section{Project overview}
 
