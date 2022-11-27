@@ -50,3 +50,7 @@
   - GAN:        https://arxiv.org/pdf/1611.08408.pdf
   - DCGAN:      https://arxiv.org/abs/1511.06434
     - PyTorch DCGAN tutorial: https://pytorch.org/tutorials/beginner/dcgan_faces_tutorial.html
+  - UNET-GAN:   https://arxiv.org/pdf/2002.12655.pdf 
+    - UNET:     https://arxiv.org/pdf/1505.04597.pdf
+    - UNET tutorial: https://pyimagesearch.com/2021/11/08/u-net-training-image-segmentation-models-in-pytorch/
+  - Style-Transfer Tutorial: https://towardsdatascience.com/implementing-neural-style-transfer-using-pytorch-fd8d43fb7bfa
