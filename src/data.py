@@ -1,0 +1,34 @@
+import nibabel as nib
+
+from PIL import Image
+from torch.utils.data import Dataset
+
+class BraTSDataset(Dataset):
+    def __init__(self, image_paths, transforms=None) -> None:
+        # store the image and mask filepaths
+        # store the transforms
+        self.imagePaths = image_paths
+        self.transforms = transforms
+    
+    def __len__(self):
+        # return the total number of samples
+        return len(self.imagePaths)
+    
+    def __getitem__(self, index):
+        # grab the image path from current index
+        imagePath = self.imagePaths[index]
+
+        # load the Nifti1 image and its mask from disk
+        nii_image = nib.load(imagePath)
+        # Get numpy array from Nifti1 and select the 77th slice (the middle slice)
+        # Total slices = 155
+        image = nii_image.get_fdata()[:,:,77]
+        image = Image.fromarray(image)
+
+        # check if we need to apply transformations
+        if self.transforms is not None:
+            # apply the transforms
+            image = self.transforms(image)
+        
+        # return a tuple of the image and its mask
+        return image
