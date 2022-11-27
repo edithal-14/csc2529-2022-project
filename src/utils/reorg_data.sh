@@ -70,9 +70,9 @@ then
         for class in ${CLASSES[*]}
         do
             mkdir "$TRAIN_DATA_DIR/$class"
-            find $TRAIN_DATA_DIR -type f -iname "*${class}*" -exec mv -t $TRAIN_DATA_DIR/$class '{}' +
+            find $TRAIN_DATA_DIR -type f -iname "*${class}.nii.gz" -exec mv -t $TRAIN_DATA_DIR/$class '{}' +
             mkdir "$VAL_DATA_DIR/$class"
-            find $VAL_DATA_DIR -type f -iname "*${class}*" -exec mv -t $TRAIN_DATA_DIR/$class '{}' +
+            find $VAL_DATA_DIR -type f -iname "*${class}.nii.gz" -exec mv -t $VAL_DATA_DIR/$class '{}' +
         done
 
         # Move everything under one directory
