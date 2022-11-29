@@ -3,6 +3,8 @@ import nibabel as nib
 from PIL import Image
 from torch.utils.data import Dataset
 
+import numpy as np
+
 class BraTSDataset(Dataset):
     def __init__(self, image_paths, transforms=None) -> None:
         # store the image and mask filepaths
@@ -23,6 +25,7 @@ class BraTSDataset(Dataset):
         # Get numpy array from Nifti1 and select the 77th slice (the middle slice)
         # Total slices = 155
         image = nii_image.get_fdata()[:,:,77]
+        image = np.uint8(image/image.max()*255)
         image = Image.fromarray(image)
 
         # check if we need to apply transformations
