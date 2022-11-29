@@ -98,7 +98,7 @@ class GANTrainer():
                 self.optimizerG.step()
 
                 # Output training stats
-                if i % max(int(0.032*len(self.dataloader)),2) == 0:
+                if i % 12 == 0:
                     print('[%d/%d][%d/%d]\tLoss_D: %.4f\tLoss_G: %.4f\tD(x): %.4f\tD(G(z)): %.4f / %.4f'
                         % (epoch, self.num_epochs, i, len(self.dataloader),
                             errD.item(), errG.item(), D_x, D_G_z1, D_G_z2))
@@ -108,7 +108,7 @@ class GANTrainer():
                 self.D_losses.append(errD.item())
 
                 # Check how the generator is doing by saving G's output on fixed_noise
-                if (self.iters % int(0.063*len(self.dataloader)*self.num_epochs) == 0) or ((epoch == self.num_epochs-1) and (i == len(self.dataloader)-1)):
+                if (self.iters % 12 == 0) or ((epoch == self.num_epochs-1) and (i == len(self.dataloader)-1)):
                     with torch.no_grad():
                         fake = self.netG(fixed_noise).detach().cpu()
                     self.img_list.append(vutils.make_grid(fake, scale_each=True, normalize=True))

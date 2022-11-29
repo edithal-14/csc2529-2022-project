@@ -53,7 +53,7 @@ NGC = 1
 
 # Define learning rate, beta1
 GLR = 2e-4
-GBETA1 = 0.0
+GBETA1 = 0.5
 
 
 ############################################################
@@ -69,18 +69,18 @@ NUM_LEVELS = 4
 
 # Define learning rate, beta1
 DLR = 2e-4
-DBETA1 = 0.0
+DBETA1 = 0.5
 
 # Define negative slope for LeakyReLU activation
-NEG_SLOPE = 0.01
+NEG_SLOPE = 0.2
 
 ############################################################
 ################# COMMON TRAIN PARAMS ######################
 ############################################################
 
 # Initialize umber of epochs to train for, and batch size
-NUM_EPOCHS = 1000
-BATCH_SIZE = 64
+NUM_EPOCHS = 50
+BATCH_SIZE = 16
 
 ############################################################
 ################### IMAGE TRANSFORMS #######################
