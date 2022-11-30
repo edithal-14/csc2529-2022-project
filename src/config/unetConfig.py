@@ -52,7 +52,7 @@ BT_CLASS = "T1"
 ############################################################
 
 # Size of latent vector z (input to generator)
-LATENT_SZ = 300 # 200 is decent
+LATENT_SZ = 300 # 300 is good
 # Size of feature maps for generator
 NGF = 64
 # Number of channels in the output
@@ -86,8 +86,12 @@ NEG_SLOPE = 0.2
 ############################################################
 
 # Initialize umber of epochs to train for, and batch size
-NUM_EPOCHS = 15 # 25 seems good!
+NUM_EPOCHS = 15 # 15 seems good!
 BATCH_SIZE = 64
+
+# Weigth initialization
+WINIT = "norm"
+
 ############################################################
 ################### IMAGE TRANSFORMS #######################
 ############################################################
