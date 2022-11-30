@@ -1,7 +1,11 @@
+import numpy as np
 import torch
 import torch.nn as nn
 import torch.optim as optim
 import torchvision.utils as vutils
+
+from skimage.metrics import peak_signal_noise_ratio as psnr
+from skimage.metrics import structural_similarity as ssim
 
 class GANTrainer():
     def __init__(self, num_epochs, glr, dlr, gbeta1, dbeta1, dataloader, netG, netD, device) -> None:
@@ -35,11 +39,36 @@ class GANTrainer():
         self.G_losses = []
         self.D_losses = []
         self.iters = 0
-    
-    def train(self, nz):
+        self.best_g_psnr = 0
+        self.best_g_ssim = 0
+        self.best_g_weights = None
+        self.best_d_weights = None
+
+    def getBatchMeanPSNR(self, rbatch, fbatch):
+        mpsnr = 0
+        b_size = rbatch.shape[0]
+        for i in range(b_size):
+            mpsnr += np.round(psnr(
+                np.transpose(rbatch[i,:,:,:],(1,2,0)),
+                np.transpose(fbatch[i,:,:,:],(1,2,0)),
+                data_range=1), decimals=4)
+        return mpsnr/b_size
+
+    def getBatchMeanSSIM(self, rbatch, fbatch):
+        mssim = 0
+        b_size = rbatch.shape[0]
+        for i in range(b_size):
+            mssim += np.round(ssim(
+                rbatch[i,:,:,:],
+                fbatch[i,:,:,:],
+                channel_axis=0,
+                data_range=1.), decimals=4)
+        return mssim/b_size
+
+    def train(self, nz, batch_sz):
         # Create batch of latent vectors that we will use to visualize
         #  the progression of the generator
-        fixed_noise = torch.randn(64, nz, 1, 1, device=self.device)
+        fixed_noise = torch.randn(batch_sz, nz, 1, 1, device=self.device)
 
         print("Starting Training Loop...")
         # For each epoch
@@ -53,11 +82,11 @@ class GANTrainer():
                 ## Train with all-real batch
                 self.netD.zero_grad()
                 # Format batch
-                real_cpu = data.to(self.device)
-                b_size = real_cpu.size(0)
+                real = data.to(self.device)
+                b_size = real.size(0)
                 label = torch.full((b_size,), self.real_label, dtype=torch.float, device=self.device)
                 # Forward pass real batch through D
-                output = self.netD(real_cpu).view(-1)
+                output = self.netD(real).view(-1)
                 # Calculate loss on all-real batch
                 errD_real = self.criterion(output, label)
                 # Calculate gradients for D in backward pass
@@ -97,15 +126,29 @@ class GANTrainer():
                 # Update G
                 self.optimizerG.step()
 
-                # Output training stats
-                if i % 12 == 0:
-                    print('[%d/%d][%d/%d]\tLoss_D: %.4f\tLoss_G: %.4f\tD(x): %.4f\tD(G(z)): %.4f / %.4f'
-                        % (epoch, self.num_epochs, i, len(self.dataloader),
-                            errD.item(), errG.item(), D_x, D_G_z1, D_G_z2))
+                # Check PSNR and SSIM scores and update best_G_weights accordingly
+                # generate fake images after updating generator weights
+                fake = self.netG(fixed_noise).detach().cpu().numpy()
+                real = real.cpu().numpy()
+                mpsnr = self.getBatchMeanPSNR(real,fake)
+                mssim = self.getBatchMeanSSIM(real,fake)
+                # Currently, updating based on PSNR values
+                if mpsnr > self.best_g_psnr:
+                    self.best_g_weights = self.netG.state_dict()
+                    self.best_d_weights = self.netD.state_dict()
+                    self.best_g_psnr = mpsnr
+                    self.best_g_ssim = mssim
 
                 # Save Losses for plotting later
                 self.G_losses.append(errG.item())
                 self.D_losses.append(errD.item())
+
+                # Output training stats
+                if i % 12 == 0:
+                    print('[%d/%d][%d/%d]\tLoss_D: %.4f\tLoss_G: %.4f\tD(x): %.4f\tD(G(z)): %.4f / %.4f\tMPSNR: %.4f\tMSSIM: %.4f'
+                        % (epoch, self.num_epochs, i, len(self.dataloader),
+                            errD.item(), errG.item(), D_x, D_G_z1, D_G_z2,
+                            mpsnr, mssim))
 
                 # Check how the generator is doing by saving G's output on fixed_noise
                 if (self.iters % 12 == 0) or ((epoch == self.num_epochs-1) and (i == len(self.dataloader)-1)):
@@ -113,4 +156,10 @@ class GANTrainer():
                         fake = self.netG(fixed_noise).detach().cpu()
                     self.img_list.append(vutils.make_grid(fake, scale_each=True, normalize=True))
 
-                self.iters += 1        
+                self.iters += 1
+
+        # Update model weights with the best ones found during training
+        self.netG.load_state_dict(self.best_g_weights)
+        self.netD.load_state_dict(self.best_d_weights)
+
+        return self.netG, self.netD
