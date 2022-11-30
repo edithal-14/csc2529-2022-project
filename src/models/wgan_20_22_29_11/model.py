@@ -39,7 +39,7 @@ feature_map_size = image_size
 # Training configuration
 device = torch.device("cuda:0")
 batch_size = 32
-n_epochs = 100
+n_epochs = 500
 n_critic = 5
 lr = 0.001
 beta1 = 0.5
