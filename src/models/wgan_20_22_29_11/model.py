@@ -38,7 +38,7 @@ device = torch.device("cuda:0")
 batch_size = 16
 real_label = -1.0
 fake_label = 1.0
-n_epochs = 10
+n_epochs = 50
 n_critic = 5
 
 # Dataset configuration
