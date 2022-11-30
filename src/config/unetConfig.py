@@ -13,7 +13,6 @@ DSET_BASEPATH = os.path.join(SRC_PATH, "data/MICCAI_BraTS2020/train")
 # Define the path to the images
 DSET_CPATHS = {
     "FLAIR" : os.path.join(DSET_BASEPATH, "flair"),
-    "SEG" : os.path.join(DSET_BASEPATH, "seg"),
     "T1CE" : os.path.join(DSET_BASEPATH, "t1ce"),
     "T1" : os.path.join(DSET_BASEPATH, "t1"),
     "T2" : os.path.join(DSET_BASEPATH, "t2")
@@ -46,7 +45,7 @@ NUM_WORKERS = 10
 ############################################################
 
 # Define the class for which model is being trained
-BT_CLASS = "T2"
+BT_CLASS = "T1"
 
 ############################################################
 ################### GEN ARCH (DCGAN) #######################
@@ -88,7 +87,7 @@ NEG_SLOPE = 0.2
 
 # Initialize umber of epochs to train for, and batch size
 NUM_EPOCHS = 15 # 25 seems good!
-BATCH_SIZE = 16
+BATCH_SIZE = 64
 ############################################################
 ################### IMAGE TRANSFORMS #######################
 ############################################################

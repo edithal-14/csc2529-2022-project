@@ -41,8 +41,8 @@ class GANTrainer():
         self.iters = 0
         self.best_g_psnr = 0
         self.best_g_ssim = 0
-        self.best_g_weights = None
-        self.best_d_weights = None
+        self.best_g_state = None
+        self.best_d_state = None
 
     def getBatchMeanPSNR(self, rbatch, fbatch):
         mpsnr = 0
@@ -134,8 +134,8 @@ class GANTrainer():
                 mssim = self.getBatchMeanSSIM(real,fake)
                 # Currently, updating based on PSNR values
                 if mpsnr > self.best_g_psnr:
-                    self.best_g_weights = self.netG.state_dict()
-                    self.best_d_weights = self.netD.state_dict()
+                    self.best_g_state = self.netG.state_dict()
+                    self.best_d_state = self.netD.state_dict()
                     self.best_g_psnr = mpsnr
                     self.best_g_ssim = mssim
 
@@ -157,9 +157,3 @@ class GANTrainer():
                     self.img_list.append(vutils.make_grid(fake, scale_each=True, normalize=True))
 
                 self.iters += 1
-
-        # Update model weights with the best ones found during training
-        self.netG.load_state_dict(self.best_g_weights)
-        self.netD.load_state_dict(self.best_d_weights)
-
-        return self.netG, self.netD
