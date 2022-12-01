@@ -1,0 +1,3 @@
+111m 13.2s
+best_psnr: 19.2210
+Best SSIM: 0.5949
