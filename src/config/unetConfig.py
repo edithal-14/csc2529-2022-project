@@ -8,15 +8,15 @@ import os
 SRC_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 
 # Base path of the dataset
-DATASET_PATH = os.path.join(SRC_PATH, "data/MICCAI_BraTS2020/train")
+DSET_BASEPATH = os.path.join(SRC_PATH, "data/MICCAI_BraTS2020/train")
 
-# Define the path to the images 
-CLASSES = ["flair", "seg", "t1ce", "t1", "t2"]
-FLAIR_DATASET_PATH = os.path.join(DATASET_PATH, "flair")
-SEG_DATASET_PATH = os.path.join(DATASET_PATH, "seg")
-T1CE_DATASET_PATH = os.path.join(DATASET_PATH, "t1ce")
-T1_DATASET_PATH = os.path.join(DATASET_PATH, "t1")
-T2_DATASET_PATH = os.path.join(DATASET_PATH, "t2")
+# Define the path to the images
+DSET_CPATHS = {
+    "FLAIR" : os.path.join(DSET_BASEPATH, "flair"),
+    "T1CE" : os.path.join(DSET_BASEPATH, "t1ce"),
+    "T1" : os.path.join(DSET_BASEPATH, "t1"),
+    "T2" : os.path.join(DSET_BASEPATH, "t2")
+}
 
 # Define the path to the base output directory
 BASE_OUTPUT = os.path.join(SRC_PATH, "output")
@@ -41,18 +41,25 @@ PIN_MEMORY = True if DEVICE == "cuda" else False
 NUM_WORKERS = 10
 
 ############################################################
+################### Brain Tumor Class ######################
+############################################################
+
+# Define the class for which model is being trained
+BT_CLASS = "T1"
+
+############################################################
 ################### GEN ARCH (DCGAN) #######################
 ############################################################
 
 # Size of latent vector z (input to generator)
-LATENT_SZ = 100
+LATENT_SZ = 300 # 300 is good
 # Size of feature maps for generator
 NGF = 64
 # Number of channels in the output
 NGC = 1
 
 # Define learning rate, beta1
-GLR = 2e-4
+GLR = 1e-3
 GBETA1 = 0.5
 
 
@@ -79,8 +86,11 @@ NEG_SLOPE = 0.2
 ############################################################
 
 # Initialize umber of epochs to train for, and batch size
-NUM_EPOCHS = 50
-BATCH_SIZE = 16
+NUM_EPOCHS = 15 # 15 seems good!
+BATCH_SIZE = 64
+
+# Weigth initialization
+WINIT = "norm"
 
 ############################################################
 ################### IMAGE TRANSFORMS #######################

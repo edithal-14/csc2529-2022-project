@@ -1,0 +1,1006 @@
+Best SSIM:0.3886
+Best PSNR: 19.5988
+Training time: 23 minutes 27 seconds
+
+Starting training....
+Number of mini batch iterations per epoch: 12
+0it [00:00, ?it/s]MIOpen(HIP): Warning [SQLiteBase] Missing system database file: gfx1030_14.kdb Performance may degrade. Please follow instructions to install: https://github.com/ROCmSoftwarePlatform/MIOpen#installing-miopen-kernels-package
+12it [00:45,  3.77s/it]
+epoch: 0, d_loss: -0.5440, g_loss: 0.3458 
+psnr: 8.3220, best_psnr: 10.3512 
+ssim: 0.0121, best_ssim: 0.0229 
+
+12it [00:06,  1.75it/s]
+epoch: 1, d_loss: -0.9345, g_loss: 0.4863 
+psnr: 7.2147, best_psnr: 10.3512 
+ssim: 0.0252, best_ssim: 0.0229 
+
+12it [00:07,  1.71it/s]
+epoch: 2, d_loss: -0.6144, g_loss: 0.1438 
+psnr: 9.7229, best_psnr: 10.3512 
+ssim: 0.0915, best_ssim: 0.0229 
+
+12it [00:06,  1.75it/s]
+epoch: 3, d_loss: -0.4692, g_loss: 0.3150 
+psnr: 10.9339, best_psnr: 11.2469 
+ssim: 0.1168, best_ssim: 0.0918 
+
+12it [00:06,  1.76it/s]
+epoch: 4, d_loss: -0.4071, g_loss: -0.0153 
+psnr: 10.8284, best_psnr: 11.2469 
+ssim: 0.1588, best_ssim: 0.0918 
+
+12it [00:06,  1.72it/s]
+epoch: 5, d_loss: -0.3837, g_loss: -0.2716 
+psnr: 11.6180, best_psnr: 11.6180 
+ssim: 0.1496, best_ssim: 0.1496 
+
+12it [00:06,  1.75it/s]
+epoch: 6, d_loss: -0.2583, g_loss: 0.5264 
+psnr: 11.0343, best_psnr: 11.6180 
+ssim: 0.1393, best_ssim: 0.1496 
+
+12it [00:07,  1.68it/s]
+epoch: 7, d_loss: -0.2615, g_loss: 0.5052 
+psnr: 10.5701, best_psnr: 11.6180 
+ssim: 0.1467, best_ssim: 0.1496 
+
+12it [00:06,  1.72it/s]
+epoch: 8, d_loss: -0.2964, g_loss: -0.2379 
+psnr: 10.5483, best_psnr: 11.6180 
+ssim: 0.2658, best_ssim: 0.1496 
+
+12it [00:07,  1.71it/s]
+epoch: 9, d_loss: -0.0958, g_loss: -0.4743 
+psnr: 11.6593, best_psnr: 11.8515 
+ssim: 0.1421, best_ssim: 0.1448 
+
+12it [00:06,  1.76it/s]
+epoch: 10, d_loss: -0.3644, g_loss: 0.0922 
+psnr: 10.7380, best_psnr: 11.8515 
+ssim: 0.1194, best_ssim: 0.1448 
+
+12it [00:06,  1.79it/s]
+epoch: 11, d_loss: -0.4724, g_loss: 0.1525 
+psnr: 11.7110, best_psnr: 11.8515 
+ssim: 0.2596, best_ssim: 0.1448 
+
+12it [00:06,  1.78it/s]
+epoch: 12, d_loss: -0.4267, g_loss: 0.4143 
+psnr: 12.0991, best_psnr: 14.7308 
+ssim: 0.1255, best_ssim: 0.1700 
+
+12it [00:06,  1.72it/s]
+epoch: 13, d_loss: -0.0629, g_loss: 0.3525 
+psnr: 15.7279, best_psnr: 15.7279 
+ssim: 0.1967, best_ssim: 0.2624 
+
+12it [00:06,  1.76it/s]
+epoch: 14, d_loss: -0.1245, g_loss: 0.1596 
+psnr: 13.4470, best_psnr: 16.1128 
+ssim: 0.1672, best_ssim: 0.1742 
+
+12it [00:06,  1.79it/s]
+epoch: 15, d_loss: -0.1251, g_loss: 0.4528 
+psnr: 13.4089, best_psnr: 16.1909 
+ssim: 0.1858, best_ssim: 0.2965 
+
+12it [00:06,  1.79it/s]
+epoch: 16, d_loss: -0.0609, g_loss: -0.1126 
+psnr: 12.5792, best_psnr: 16.1909 
+ssim: 0.1533, best_ssim: 0.2965 
+
+12it [00:07,  1.70it/s]
+epoch: 17, d_loss: -0.1369, g_loss: -0.3899 
+psnr: 13.9212, best_psnr: 16.1909 
+ssim: 0.1642, best_ssim: 0.2965 
+
+12it [00:06,  1.78it/s]
+epoch: 18, d_loss: -0.1307, g_loss: 0.2472 
+psnr: 14.0053, best_psnr: 16.6380 
+ssim: 0.1442, best_ssim: 0.2778 
+
+12it [00:06,  1.82it/s]
+epoch: 19, d_loss: -0.2807, g_loss: 0.0921 
+psnr: 15.7355, best_psnr: 16.6380 
+ssim: 0.3002, best_ssim: 0.2778 
+
+12it [00:06,  1.85it/s]
+epoch: 20, d_loss: -0.2767, g_loss: -0.2463 
+psnr: 15.2897, best_psnr: 16.6380 
+ssim: 0.2027, best_ssim: 0.2778 
+
+12it [00:06,  1.74it/s]
+epoch: 21, d_loss: -0.0783, g_loss: -0.2018 
+psnr: 14.7707, best_psnr: 16.6380 
+ssim: 0.1842, best_ssim: 0.2778 
+
+12it [00:06,  1.85it/s]
+epoch: 22, d_loss: -0.1087, g_loss: 0.4453 
+psnr: 13.2848, best_psnr: 16.6380 
+ssim: 0.1580, best_ssim: 0.2778 
+
+12it [00:06,  1.78it/s]
+epoch: 23, d_loss: -0.0922, g_loss: -0.1496 
+psnr: 12.0471, best_psnr: 16.6380 
+ssim: 0.1484, best_ssim: 0.2778 
+
+12it [00:06,  1.75it/s]
+epoch: 24, d_loss: -0.1199, g_loss: -0.2719 
+psnr: 12.8730, best_psnr: 16.6380 
+ssim: 0.2880, best_ssim: 0.2778 
+
+12it [00:06,  1.81it/s]
+epoch: 25, d_loss: -0.1730, g_loss: -0.0565 
+psnr: 13.4079, best_psnr: 16.6380 
+ssim: 0.3332, best_ssim: 0.2778 
+
+12it [00:06,  1.80it/s]
+epoch: 26, d_loss: -0.1691, g_loss: 0.1146 
+psnr: 12.8762, best_psnr: 16.6380 
+ssim: 0.2564, best_ssim: 0.2778 
+
+12it [00:06,  1.84it/s]
+epoch: 27, d_loss: -0.1037, g_loss: 0.3630 
+psnr: 13.8888, best_psnr: 16.6380 
+ssim: 0.3338, best_ssim: 0.2778 
+
+12it [00:06,  1.78it/s]
+epoch: 28, d_loss: -0.1604, g_loss: 0.1475 
+psnr: 12.8085, best_psnr: 16.6380 
+ssim: 0.2685, best_ssim: 0.2778 
+
+12it [00:06,  1.79it/s]
+epoch: 29, d_loss: -0.2145, g_loss: -0.3802 
+psnr: 13.5005, best_psnr: 16.6380 
+ssim: 0.1673, best_ssim: 0.2778 
+
+12it [00:06,  1.81it/s]
+epoch: 30, d_loss: -0.0378, g_loss: 0.2559 
+psnr: 12.1358, best_psnr: 16.6380 
+ssim: 0.1600, best_ssim: 0.2778 
+
+12it [00:06,  1.81it/s]
+epoch: 31, d_loss: -0.1607, g_loss: -0.0278 
+psnr: 14.4717, best_psnr: 16.6380 
+ssim: 0.2249, best_ssim: 0.2778 
+
+12it [00:06,  1.80it/s]
+epoch: 32, d_loss: -0.1584, g_loss: -0.3517 
+psnr: 13.5119, best_psnr: 16.6380 
+ssim: 0.2551, best_ssim: 0.2778 
+
+12it [00:06,  1.80it/s]
+epoch: 33, d_loss: -0.1912, g_loss: 0.2726 
+psnr: 15.2293, best_psnr: 16.6380 
+ssim: 0.3677, best_ssim: 0.2778 
+
+12it [00:06,  1.81it/s]
+epoch: 34, d_loss: -0.1841, g_loss: -0.2918 
+psnr: 15.5091, best_psnr: 16.6380 
+ssim: 0.2795, best_ssim: 0.2778 
+
+12it [00:06,  1.80it/s]
+epoch: 35, d_loss: -0.4352, g_loss: 0.3639 
+psnr: 15.4155, best_psnr: 16.6670 
+ssim: 0.3018, best_ssim: 0.2761 
+
+12it [00:06,  1.81it/s]
+epoch: 36, d_loss: -0.1515, g_loss: -0.0730 
+psnr: 14.6674, best_psnr: 16.6670 
+ssim: 0.3225, best_ssim: 0.2761 
+
+12it [00:06,  1.79it/s]
+epoch: 37, d_loss: -0.2637, g_loss: -0.2255 
+psnr: 14.1911, best_psnr: 16.6670 
+ssim: 0.3084, best_ssim: 0.2761 
+
+12it [00:06,  1.87it/s]
+epoch: 38, d_loss: -0.3421, g_loss: -0.1215 
+psnr: 15.3604, best_psnr: 16.6670 
+ssim: 0.2299, best_ssim: 0.2761 
+
+12it [00:06,  1.80it/s]
+epoch: 39, d_loss: -0.2473, g_loss: -0.5220 
+psnr: 14.3075, best_psnr: 16.6670 
+ssim: 0.2967, best_ssim: 0.2761 
+
+12it [00:06,  1.77it/s]
+epoch: 40, d_loss: -0.2008, g_loss: 0.4645 
+psnr: 14.7780, best_psnr: 16.6670 
+ssim: 0.3905, best_ssim: 0.2761 
+
+12it [00:06,  1.80it/s]
+epoch: 41, d_loss: -0.1575, g_loss: -0.1842 
+psnr: 14.3701, best_psnr: 16.6670 
+ssim: 0.3311, best_ssim: 0.2761 
+
+12it [00:06,  1.79it/s]
+epoch: 42, d_loss: -0.0846, g_loss: -0.1746 
+psnr: 14.3495, best_psnr: 16.6670 
+ssim: 0.2836, best_ssim: 0.2761 
+
+12it [00:06,  1.85it/s]
+epoch: 43, d_loss: -0.1617, g_loss: 0.5086 
+psnr: 14.0174, best_psnr: 16.6670 
+ssim: 0.2948, best_ssim: 0.2761 
+
+12it [00:06,  1.85it/s]
+epoch: 44, d_loss: -0.1747, g_loss: 0.3607 
+psnr: 14.0822, best_psnr: 16.6670 
+ssim: 0.2828, best_ssim: 0.2761 
+
+12it [00:06,  1.92it/s]
+epoch: 45, d_loss: -0.1824, g_loss: 0.5650 
+psnr: 14.8457, best_psnr: 16.6670 
+ssim: 0.3566, best_ssim: 0.2761 
+
+12it [00:06,  1.75it/s]
+epoch: 46, d_loss: -0.0342, g_loss: -0.3648 
+psnr: 15.2139, best_psnr: 16.6836 
+ssim: 0.3582, best_ssim: 0.4085 
+
+12it [00:06,  1.88it/s]
+epoch: 47, d_loss: -0.2843, g_loss: 0.0145 
+psnr: 15.1339, best_psnr: 16.6836 
+ssim: 0.4352, best_ssim: 0.4085 
+
+12it [00:06,  1.82it/s]
+epoch: 48, d_loss: -0.3416, g_loss: -0.2289 
+psnr: 14.3431, best_psnr: 16.6836 
+ssim: 0.3713, best_ssim: 0.4085 
+
+12it [00:06,  1.79it/s]
+epoch: 49, d_loss: -0.4130, g_loss: -0.3535 
+psnr: 15.1442, best_psnr: 16.6836 
+ssim: 0.2572, best_ssim: 0.4085 
+
+12it [00:06,  1.78it/s]
+epoch: 50, d_loss: -0.3282, g_loss: 0.2945 
+psnr: 14.6905, best_psnr: 16.6836 
+ssim: 0.3114, best_ssim: 0.4085 
+
+12it [00:06,  1.75it/s]
+epoch: 51, d_loss: -0.3192, g_loss: -0.3285 
+psnr: 13.4392, best_psnr: 16.6836 
+ssim: 0.2922, best_ssim: 0.4085 
+
+12it [00:06,  1.79it/s]
+epoch: 52, d_loss: -0.4876, g_loss: -0.0920 
+psnr: 12.5748, best_psnr: 16.6836 
+ssim: 0.2762, best_ssim: 0.4085 
+
+12it [00:06,  1.82it/s]
+epoch: 53, d_loss: -0.2775, g_loss: 0.1055 
+psnr: 13.1223, best_psnr: 16.6836 
+ssim: 0.3357, best_ssim: 0.4085 
+
+12it [00:06,  1.80it/s]
+epoch: 54, d_loss: -0.5466, g_loss: -0.1610 
+psnr: 13.8615, best_psnr: 16.6836 
+ssim: 0.4106, best_ssim: 0.4085 
+
+12it [00:06,  1.77it/s]
+epoch: 55, d_loss: -0.5145, g_loss: 0.2284 
+psnr: 12.6025, best_psnr: 16.6836 
+ssim: 0.3514, best_ssim: 0.4085 
+
+12it [00:06,  1.84it/s]
+epoch: 56, d_loss: -0.5906, g_loss: 0.1825 
+psnr: 13.4053, best_psnr: 16.6836 
+ssim: 0.3173, best_ssim: 0.4085 
+
+12it [00:07,  1.71it/s]
+epoch: 57, d_loss: -0.5361, g_loss: 0.4569 
+psnr: 11.5097, best_psnr: 16.6836 
+ssim: 0.2954, best_ssim: 0.4085 
+
+12it [00:06,  1.84it/s]
+epoch: 58, d_loss: -0.3021, g_loss: 0.5132 
+psnr: 13.1960, best_psnr: 16.6836 
+ssim: 0.3781, best_ssim: 0.4085 
+
+12it [00:06,  1.77it/s]
+epoch: 59, d_loss: -0.5539, g_loss: 0.1050 
+psnr: 13.2873, best_psnr: 16.6836 
+ssim: 0.3538, best_ssim: 0.4085 
+
+12it [00:06,  1.81it/s]
+epoch: 60, d_loss: -0.6876, g_loss: 0.4680 
+psnr: 12.3846, best_psnr: 16.6836 
+ssim: 0.2804, best_ssim: 0.4085 
+
+12it [00:06,  1.75it/s]
+epoch: 61, d_loss: -0.4640, g_loss: 0.4930 
+psnr: 14.5930, best_psnr: 16.6836 
+ssim: 0.3829, best_ssim: 0.4085 
+
+12it [00:06,  1.76it/s]
+epoch: 62, d_loss: -0.7142, g_loss: 0.6197 
+psnr: 12.0754, best_psnr: 16.6836 
+ssim: 0.1838, best_ssim: 0.4085 
+
+12it [00:06,  1.77it/s]
+epoch: 63, d_loss: -0.7052, g_loss: 0.3648 
+psnr: 13.0260, best_psnr: 16.6836 
+ssim: 0.2720, best_ssim: 0.4085 
+
+12it [00:06,  1.79it/s]
+epoch: 64, d_loss: -0.4400, g_loss: 0.4976 
+psnr: 12.4062, best_psnr: 16.6836 
+ssim: 0.2151, best_ssim: 0.4085 
+
+12it [00:06,  1.79it/s]
+epoch: 65, d_loss: -0.5852, g_loss: 0.1775 
+psnr: 13.2598, best_psnr: 16.6836 
+ssim: 0.2863, best_ssim: 0.4085 
+
+12it [00:06,  1.83it/s]
+epoch: 66, d_loss: -0.4805, g_loss: -0.1688 
+psnr: 13.6609, best_psnr: 16.6836 
+ssim: 0.2485, best_ssim: 0.4085 
+
+12it [00:06,  1.78it/s]
+epoch: 67, d_loss: -0.6430, g_loss: 0.5897 
+psnr: 13.8503, best_psnr: 16.6836 
+ssim: 0.3182, best_ssim: 0.4085 
+
+12it [00:06,  1.81it/s]
+epoch: 68, d_loss: -0.5933, g_loss: -0.0688 
+psnr: 12.1257, best_psnr: 16.6836 
+ssim: 0.2020, best_ssim: 0.4085 
+
+12it [00:06,  1.81it/s]
+epoch: 69, d_loss: -0.6081, g_loss: 0.3097 
+psnr: 14.0612, best_psnr: 16.6836 
+ssim: 0.2043, best_ssim: 0.4085 
+
+12it [00:06,  1.83it/s]
+epoch: 70, d_loss: -0.6151, g_loss: 0.5539 
+psnr: 13.8805, best_psnr: 16.6836 
+ssim: 0.2514, best_ssim: 0.4085 
+
+12it [00:06,  1.79it/s]
+epoch: 71, d_loss: -0.6755, g_loss: 0.1838 
+psnr: 13.6323, best_psnr: 16.6836 
+ssim: 0.2961, best_ssim: 0.4085 
+
+12it [00:06,  1.80it/s]
+epoch: 72, d_loss: -0.8815, g_loss: -0.3307 
+psnr: 15.2306, best_psnr: 16.6836 
+ssim: 0.3004, best_ssim: 0.4085 
+
+12it [00:06,  1.81it/s]
+epoch: 73, d_loss: -0.6688, g_loss: 0.6017 
+psnr: 13.2436, best_psnr: 16.6836 
+ssim: 0.2367, best_ssim: 0.4085 
+
+12it [00:06,  1.79it/s]
+epoch: 74, d_loss: -0.7550, g_loss: 0.1304 
+psnr: 14.4392, best_psnr: 16.6836 
+ssim: 0.3161, best_ssim: 0.4085 
+
+12it [00:06,  1.83it/s]
+epoch: 75, d_loss: -0.3945, g_loss: 0.4852 
+psnr: 12.9032, best_psnr: 16.6836 
+ssim: 0.2002, best_ssim: 0.4085 
+
+12it [00:06,  1.82it/s]
+epoch: 76, d_loss: -0.3421, g_loss: 0.6020 
+psnr: 12.5729, best_psnr: 16.6836 
+ssim: 0.1826, best_ssim: 0.4085 
+
+12it [00:06,  1.83it/s]
+epoch: 77, d_loss: -0.2438, g_loss: 0.4884 
+psnr: 11.9616, best_psnr: 16.6836 
+ssim: 0.1612, best_ssim: 0.4085 
+
+12it [00:06,  1.83it/s]
+epoch: 78, d_loss: -0.3581, g_loss: 0.3736 
+psnr: 15.3659, best_psnr: 16.6836 
+ssim: 0.2351, best_ssim: 0.4085 
+
+12it [00:06,  1.78it/s]
+epoch: 79, d_loss: -0.5727, g_loss: 0.6281 
+psnr: 13.9423, best_psnr: 16.6836 
+ssim: 0.2407, best_ssim: 0.4085 
+
+12it [00:06,  1.84it/s]
+epoch: 80, d_loss: -0.5153, g_loss: 0.5512 
+psnr: 14.2694, best_psnr: 16.6836 
+ssim: 0.1982, best_ssim: 0.4085 
+
+12it [00:06,  1.80it/s]
+epoch: 81, d_loss: -0.9295, g_loss: 0.6549 
+psnr: 13.7191, best_psnr: 16.6836 
+ssim: 0.2115, best_ssim: 0.4085 
+
+12it [00:06,  1.78it/s]
+epoch: 82, d_loss: -1.3968, g_loss: 0.7139 
+psnr: 13.9867, best_psnr: 16.6836 
+ssim: 0.2014, best_ssim: 0.4085 
+
+12it [00:06,  1.83it/s]
+epoch: 83, d_loss: -0.3730, g_loss: -0.3413 
+psnr: 13.1852, best_psnr: 16.6836 
+ssim: 0.2256, best_ssim: 0.4085 
+
+12it [00:06,  1.84it/s]
+epoch: 84, d_loss: -0.6289, g_loss: 0.2153 
+psnr: 13.6542, best_psnr: 16.6836 
+ssim: 0.2296, best_ssim: 0.4085 
+
+12it [00:06,  1.88it/s]
+epoch: 85, d_loss: -0.6022, g_loss: 0.4496 
+psnr: 14.8342, best_psnr: 16.6836 
+ssim: 0.2438, best_ssim: 0.4085 
+
+12it [00:06,  1.85it/s]
+epoch: 86, d_loss: -0.4144, g_loss: -0.3740 
+psnr: 14.6754, best_psnr: 16.6836 
+ssim: 0.2099, best_ssim: 0.4085 
+
+12it [00:06,  1.80it/s]
+epoch: 87, d_loss: -0.5915, g_loss: -0.0056 
+psnr: 12.3459, best_psnr: 16.6836 
+ssim: 0.1520, best_ssim: 0.4085 
+
+12it [00:06,  1.84it/s]
+epoch: 88, d_loss: -0.5948, g_loss: 0.3951 
+psnr: 13.6240, best_psnr: 16.6836 
+ssim: 0.1733, best_ssim: 0.4085 
+
+12it [00:06,  1.79it/s]
+epoch: 89, d_loss: -0.5781, g_loss: 0.6115 
+psnr: 15.1514, best_psnr: 16.6836 
+ssim: 0.2290, best_ssim: 0.4085 
+
+12it [00:06,  1.85it/s]
+epoch: 90, d_loss: -0.7672, g_loss: 0.3624 
+psnr: 13.2925, best_psnr: 16.6836 
+ssim: 0.1981, best_ssim: 0.4085 
+
+12it [00:06,  1.84it/s]
+epoch: 91, d_loss: -0.6128, g_loss: 0.5679 
+psnr: 13.8660, best_psnr: 16.6836 
+ssim: 0.2132, best_ssim: 0.4085 
+
+12it [00:06,  1.81it/s]
+epoch: 92, d_loss: -0.5901, g_loss: 0.5833 
+psnr: 13.2268, best_psnr: 16.6836 
+ssim: 0.1828, best_ssim: 0.4085 
+
+12it [00:06,  1.83it/s]
+epoch: 93, d_loss: -0.6245, g_loss: 0.5720 
+psnr: 13.8345, best_psnr: 16.6836 
+ssim: 0.2119, best_ssim: 0.4085 
+
+12it [00:06,  1.79it/s]
+epoch: 94, d_loss: -0.5220, g_loss: 0.5074 
+psnr: 13.4561, best_psnr: 16.6836 
+ssim: 0.2021, best_ssim: 0.4085 
+
+12it [00:06,  1.83it/s]
+epoch: 95, d_loss: -0.7435, g_loss: 0.6305 
+psnr: 14.9319, best_psnr: 16.6836 
+ssim: 0.2627, best_ssim: 0.4085 
+
+12it [00:06,  1.80it/s]
+epoch: 96, d_loss: -0.5778, g_loss: 0.5623 
+psnr: 14.9173, best_psnr: 16.6836 
+ssim: 0.2268, best_ssim: 0.4085 
+
+12it [00:06,  1.82it/s]
+epoch: 97, d_loss: -0.8135, g_loss: 0.1912 
+psnr: 14.4227, best_psnr: 16.6836 
+ssim: 0.2006, best_ssim: 0.4085 
+
+12it [00:06,  1.75it/s]
+epoch: 98, d_loss: -0.5258, g_loss: 0.5794 
+psnr: 14.8421, best_psnr: 16.6836 
+ssim: 0.2650, best_ssim: 0.4085 
+
+12it [00:06,  1.78it/s]
+epoch: 99, d_loss: -0.8004, g_loss: 0.5954 
+psnr: 16.4557, best_psnr: 16.6836 
+ssim: 0.2260, best_ssim: 0.4085 
+
+12it [00:06,  1.78it/s]
+epoch: 100, d_loss: -0.4985, g_loss: 0.6021 
+psnr: 14.4953, best_psnr: 16.6836 
+ssim: 0.2248, best_ssim: 0.4085 
+
+12it [00:06,  1.80it/s]
+epoch: 101, d_loss: -0.5266, g_loss: 0.3550 
+psnr: 14.9431, best_psnr: 16.9338 
+ssim: 0.2445, best_ssim: 0.2616 
+
+12it [00:06,  1.79it/s]
+epoch: 102, d_loss: -0.5147, g_loss: -0.2065 
+psnr: 16.2893, best_psnr: 16.9338 
+ssim: 0.2561, best_ssim: 0.2616 
+
+12it [00:06,  1.78it/s]
+epoch: 103, d_loss: -0.5200, g_loss: 0.4461 
+psnr: 15.1110, best_psnr: 16.9863 
+ssim: 0.1906, best_ssim: 0.2533 
+
+12it [00:06,  1.82it/s]
+epoch: 104, d_loss: -0.5937, g_loss: 0.1551 
+psnr: 15.5250, best_psnr: 16.9863 
+ssim: 0.1856, best_ssim: 0.2533 
+
+12it [00:06,  1.75it/s]
+epoch: 105, d_loss: -0.6184, g_loss: 0.6581 
+psnr: 15.5057, best_psnr: 17.8408 
+ssim: 0.2972, best_ssim: 0.2480 
+
+12it [00:06,  1.77it/s]
+epoch: 106, d_loss: -0.2152, g_loss: -0.2792 
+psnr: 14.4125, best_psnr: 17.8408 
+ssim: 0.1694, best_ssim: 0.2480 
+
+12it [00:06,  1.98it/s]
+epoch: 107, d_loss: -0.4644, g_loss: 0.5047 
+psnr: 16.7027, best_psnr: 17.8408 
+ssim: 0.2364, best_ssim: 0.2480 
+
+12it [00:06,  1.93it/s]
+epoch: 108, d_loss: -0.6207, g_loss: 0.3977 
+psnr: 16.9198, best_psnr: 17.8408 
+ssim: 0.2517, best_ssim: 0.2480 
+
+12it [00:06,  1.98it/s]
+epoch: 109, d_loss: -0.4426, g_loss: 0.3000 
+psnr: 16.5769, best_psnr: 17.8408 
+ssim: 0.2848, best_ssim: 0.2480 
+
+12it [00:06,  1.91it/s]
+epoch: 110, d_loss: -0.6091, g_loss: 0.6135 
+psnr: 15.9817, best_psnr: 17.8408 
+ssim: 0.2660, best_ssim: 0.2480 
+
+12it [00:06,  1.99it/s]
+epoch: 111, d_loss: -0.4097, g_loss: 0.5114 
+psnr: 15.7731, best_psnr: 17.8408 
+ssim: 0.3147, best_ssim: 0.2480 
+
+12it [00:06,  1.95it/s]
+epoch: 112, d_loss: -0.5314, g_loss: 0.5487 
+psnr: 15.9321, best_psnr: 17.8408 
+ssim: 0.2536, best_ssim: 0.2480 
+
+12it [00:06,  1.97it/s]
+epoch: 113, d_loss: -0.3758, g_loss: -0.0962 
+psnr: 16.4396, best_psnr: 17.8408 
+ssim: 0.3305, best_ssim: 0.2480 
+
+12it [00:06,  1.97it/s]
+epoch: 114, d_loss: -0.5504, g_loss: 0.2750 
+psnr: 16.0650, best_psnr: 18.0166 
+ssim: 0.2328, best_ssim: 0.3092 
+
+12it [00:06,  1.97it/s]
+epoch: 115, d_loss: -0.3581, g_loss: 0.5778 
+psnr: 15.5683, best_psnr: 18.0166 
+ssim: 0.2445, best_ssim: 0.3092 
+
+12it [00:06,  1.90it/s]
+epoch: 116, d_loss: -0.7309, g_loss: 0.2217 
+psnr: 15.7196, best_psnr: 18.0166 
+ssim: 0.2178, best_ssim: 0.3092 
+
+12it [00:06,  1.89it/s]
+epoch: 117, d_loss: -0.4518, g_loss: 0.5025 
+psnr: 16.9818, best_psnr: 18.0166 
+ssim: 0.2761, best_ssim: 0.3092 
+
+12it [00:06,  1.92it/s]
+epoch: 118, d_loss: -0.7319, g_loss: 0.5314 
+psnr: 13.8995, best_psnr: 18.2956 
+ssim: 0.1670, best_ssim: 0.3370 
+
+12it [00:06,  1.93it/s]
+epoch: 119, d_loss: -1.3128, g_loss: 0.6754 
+psnr: 13.4247, best_psnr: 18.2956 
+ssim: 0.1252, best_ssim: 0.3370 
+
+12it [00:06,  1.92it/s]
+epoch: 120, d_loss: -1.4605, g_loss: 0.7360 
+psnr: 15.6912, best_psnr: 18.2956 
+ssim: 0.1665, best_ssim: 0.3370 
+
+12it [00:06,  1.85it/s]
+epoch: 121, d_loss: -0.2818, g_loss: -0.0296 
+psnr: 15.8502, best_psnr: 18.2956 
+ssim: 0.2472, best_ssim: 0.3370 
+
+12it [00:06,  1.92it/s]
+epoch: 122, d_loss: -0.2619, g_loss: 0.2133 
+psnr: 14.7247, best_psnr: 18.2956 
+ssim: 0.2542, best_ssim: 0.3370 
+
+12it [00:06,  1.87it/s]
+epoch: 123, d_loss: -0.2746, g_loss: 0.5102 
+psnr: 15.0588, best_psnr: 18.2956 
+ssim: 0.2305, best_ssim: 0.3370 
+
+12it [00:06,  1.94it/s]
+epoch: 124, d_loss: -0.2055, g_loss: -0.5931 
+psnr: 17.0629, best_psnr: 18.2956 
+ssim: 0.2929, best_ssim: 0.3370 
+
+12it [00:06,  1.91it/s]
+epoch: 125, d_loss: -0.1960, g_loss: -0.3435 
+psnr: 19.1016, best_psnr: 19.1016 
+ssim: 0.3418, best_ssim: 0.3418 
+
+12it [00:06,  1.88it/s]
+epoch: 126, d_loss: -0.1242, g_loss: -0.1850 
+psnr: 15.7996, best_psnr: 19.1016 
+ssim: 0.2798, best_ssim: 0.3418 
+
+12it [00:06,  1.96it/s]
+epoch: 127, d_loss: -0.1882, g_loss: -0.3558 
+psnr: 14.4041, best_psnr: 19.1016 
+ssim: 0.2442, best_ssim: 0.3418 
+
+12it [00:05,  2.02it/s]
+epoch: 128, d_loss: -0.1708, g_loss: -0.3257 
+psnr: 15.1080, best_psnr: 19.1016 
+ssim: 0.2054, best_ssim: 0.3418 
+
+12it [00:06,  1.94it/s]
+epoch: 129, d_loss: -0.2722, g_loss: -0.3584 
+psnr: 16.3077, best_psnr: 19.1016 
+ssim: 0.2834, best_ssim: 0.3418 
+
+12it [00:06,  2.00it/s]
+epoch: 130, d_loss: -0.1334, g_loss: -0.1270 
+psnr: 18.6615, best_psnr: 19.1016 
+ssim: 0.3302, best_ssim: 0.3418 
+
+12it [00:06,  2.00it/s]
+epoch: 131, d_loss: -0.0301, g_loss: 0.3006 
+psnr: 18.0298, best_psnr: 19.1016 
+ssim: 0.2935, best_ssim: 0.3418 
+
+12it [00:06,  1.92it/s]
+epoch: 132, d_loss: -0.1628, g_loss: 0.1704 
+psnr: 17.5640, best_psnr: 19.1016 
+ssim: 0.3006, best_ssim: 0.3418 
+
+12it [00:06,  1.96it/s]
+epoch: 133, d_loss: -0.2182, g_loss: -0.1830 
+psnr: 17.5406, best_psnr: 19.1016 
+ssim: 0.3115, best_ssim: 0.3418 
+
+12it [00:06,  1.95it/s]
+epoch: 134, d_loss: -0.1696, g_loss: 0.1476 
+psnr: 19.5988, best_psnr: 19.5988 
+ssim: 0.3886, best_ssim: 0.3886 
+
+12it [00:06,  1.96it/s]
+epoch: 135, d_loss: -0.0870, g_loss: 0.2410 
+psnr: 17.1989, best_psnr: 19.5988 
+ssim: 0.3497, best_ssim: 0.3886 
+
+12it [00:06,  1.93it/s]
+epoch: 136, d_loss: -0.1412, g_loss: -0.5553 
+psnr: 17.0046, best_psnr: 19.5988 
+ssim: 0.3838, best_ssim: 0.3886 
+
+12it [00:06,  1.92it/s]
+epoch: 137, d_loss: -0.0145, g_loss: -0.5071 
+psnr: 15.6915, best_psnr: 19.5988 
+ssim: 0.2483, best_ssim: 0.3886 
+
+12it [00:06,  1.95it/s]
+epoch: 138, d_loss: -0.1738, g_loss: 0.0317 
+psnr: 17.2399, best_psnr: 19.5988 
+ssim: 0.3628, best_ssim: 0.3886 
+
+12it [00:06,  1.92it/s]
+epoch: 139, d_loss: -0.0682, g_loss: -0.3244 
+psnr: 18.5845, best_psnr: 19.5988 
+ssim: 0.3997, best_ssim: 0.3886 
+
+12it [00:06,  1.94it/s]
+epoch: 140, d_loss: -0.1281, g_loss: -0.1751 
+psnr: 18.4133, best_psnr: 19.5988 
+ssim: 0.3438, best_ssim: 0.3886 
+
+12it [00:06,  1.89it/s]
+epoch: 141, d_loss: -0.0773, g_loss: -0.4279 
+psnr: 17.8602, best_psnr: 19.5988 
+ssim: 0.3573, best_ssim: 0.3886 
+
+12it [00:06,  1.95it/s]
+epoch: 142, d_loss: -0.0841, g_loss: -0.1151 
+psnr: 17.5431, best_psnr: 19.5988 
+ssim: 0.3036, best_ssim: 0.3886 
+
+12it [00:06,  1.93it/s]
+epoch: 143, d_loss: -0.0509, g_loss: 0.3167 
+psnr: 16.2117, best_psnr: 19.5988 
+ssim: 0.3346, best_ssim: 0.3886 
+
+12it [00:06,  1.93it/s]
+epoch: 144, d_loss: -0.0332, g_loss: -0.4602 
+psnr: 16.2192, best_psnr: 19.5988 
+ssim: 0.2712, best_ssim: 0.3886 
+
+12it [00:06,  1.89it/s]
+epoch: 145, d_loss: -0.1176, g_loss: 0.3674 
+psnr: 17.9530, best_psnr: 19.5988 
+ssim: 0.3482, best_ssim: 0.3886 
+
+12it [00:06,  1.89it/s]
+epoch: 146, d_loss: -0.1897, g_loss: 0.2503 
+psnr: 15.8432, best_psnr: 19.5988 
+ssim: 0.2281, best_ssim: 0.3886 
+
+12it [00:05,  2.01it/s]
+epoch: 147, d_loss: -0.0827, g_loss: -0.2962 
+psnr: 16.0578, best_psnr: 19.5988 
+ssim: 0.3906, best_ssim: 0.3886 
+
+12it [00:06,  1.97it/s]
+epoch: 148, d_loss: -0.0607, g_loss: -0.2387 
+psnr: 17.0481, best_psnr: 19.5988 
+ssim: 0.3961, best_ssim: 0.3886 
+
+12it [00:06,  1.93it/s]
+epoch: 149, d_loss: -0.0896, g_loss: 0.5520 
+psnr: 14.9713, best_psnr: 19.5988 
+ssim: 0.3558, best_ssim: 0.3886 
+
+12it [00:06,  1.98it/s]
+epoch: 150, d_loss: -0.0277, g_loss: -0.1844 
+psnr: 16.4183, best_psnr: 19.5988 
+ssim: 0.3274, best_ssim: 0.3886 
+
+12it [00:06,  1.88it/s]
+epoch: 151, d_loss: -0.1654, g_loss: -0.4327 
+psnr: 18.8906, best_psnr: 19.5988 
+ssim: 0.2780, best_ssim: 0.3886 
+
+12it [00:06,  1.89it/s]
+epoch: 152, d_loss: -0.1078, g_loss: -0.1532 
+psnr: 17.1955, best_psnr: 19.5988 
+ssim: 0.3390, best_ssim: 0.3886 
+
+12it [00:06,  1.95it/s]
+epoch: 153, d_loss: -0.1328, g_loss: 0.1193 
+psnr: 15.1949, best_psnr: 19.5988 
+ssim: 0.3295, best_ssim: 0.3886 
+
+12it [00:06,  1.93it/s]
+epoch: 154, d_loss: -0.0880, g_loss: -0.1314 
+psnr: 13.6913, best_psnr: 19.5988 
+ssim: 0.2366, best_ssim: 0.3886 
+
+12it [00:06,  1.91it/s]
+epoch: 155, d_loss: -0.1056, g_loss: 0.2477 
+psnr: 14.6374, best_psnr: 19.5988 
+ssim: 0.2587, best_ssim: 0.3886 
+
+12it [00:06,  1.90it/s]
+epoch: 156, d_loss: -0.0278, g_loss: 0.0913 
+psnr: 16.1777, best_psnr: 19.5988 
+ssim: 0.3527, best_ssim: 0.3886 
+
+12it [00:06,  1.91it/s]
+epoch: 157, d_loss: -0.0279, g_loss: -0.5409 
+psnr: 16.5343, best_psnr: 19.5988 
+ssim: 0.3800, best_ssim: 0.3886 
+
+12it [00:06,  1.91it/s]
+epoch: 158, d_loss: -0.0295, g_loss: -0.1276 
+psnr: 15.2912, best_psnr: 19.5988 
+ssim: 0.3542, best_ssim: 0.3886 
+
+12it [00:06,  1.94it/s]
+epoch: 159, d_loss: -0.0654, g_loss: -0.2282 
+psnr: 15.9652, best_psnr: 19.5988 
+ssim: 0.3380, best_ssim: 0.3886 
+
+12it [00:06,  1.90it/s]
+epoch: 160, d_loss: -0.0120, g_loss: -0.4630 
+psnr: 14.2691, best_psnr: 19.5988 
+ssim: 0.2690, best_ssim: 0.3886 
+
+12it [00:06,  1.96it/s]
+epoch: 161, d_loss: -0.0677, g_loss: 0.0009 
+psnr: 15.4605, best_psnr: 19.5988 
+ssim: 0.3421, best_ssim: 0.3886 
+
+12it [00:06,  1.91it/s]
+epoch: 162, d_loss: -0.0670, g_loss: 0.0080 
+psnr: 16.3076, best_psnr: 19.5988 
+ssim: 0.3793, best_ssim: 0.3886 
+
+12it [00:06,  1.89it/s]
+epoch: 163, d_loss: -0.0862, g_loss: -0.2398 
+psnr: 13.7912, best_psnr: 19.5988 
+ssim: 0.3122, best_ssim: 0.3886 
+
+12it [00:06,  1.96it/s]
+epoch: 164, d_loss: -0.0880, g_loss: -0.3020 
+psnr: 15.3405, best_psnr: 19.5988 
+ssim: 0.3078, best_ssim: 0.3886 
+
+12it [00:06,  1.93it/s]
+epoch: 165, d_loss: -0.0922, g_loss: 0.3137 
+psnr: 13.8814, best_psnr: 19.5988 
+ssim: 0.2828, best_ssim: 0.3886 
+
+12it [00:06,  1.97it/s]
+epoch: 166, d_loss: -0.0528, g_loss: 0.3641 
+psnr: 15.6568, best_psnr: 19.5988 
+ssim: 0.2541, best_ssim: 0.3886 
+
+12it [00:06,  1.90it/s]
+epoch: 167, d_loss: -0.0431, g_loss: 0.3489 
+psnr: 14.3790, best_psnr: 19.5988 
+ssim: 0.2075, best_ssim: 0.3886 
+
+12it [00:06,  1.95it/s]
+epoch: 168, d_loss: -0.0080, g_loss: -0.5140 
+psnr: 14.9175, best_psnr: 19.5988 
+ssim: 0.2703, best_ssim: 0.3886 
+
+12it [00:06,  1.92it/s]
+epoch: 169, d_loss: -0.0416, g_loss: -0.2664 
+psnr: 14.7181, best_psnr: 19.5988 
+ssim: 0.2276, best_ssim: 0.3886 
+
+12it [00:06,  1.95it/s]
+epoch: 170, d_loss: -0.0857, g_loss: 0.2202 
+psnr: 13.7630, best_psnr: 19.5988 
+ssim: 0.2274, best_ssim: 0.3886 
+
+12it [00:05,  2.02it/s]
+epoch: 171, d_loss: -0.0408, g_loss: -0.0674 
+psnr: 14.3585, best_psnr: 19.5988 
+ssim: 0.2729, best_ssim: 0.3886 
+
+12it [00:06,  1.97it/s]
+epoch: 172, d_loss: -0.0480, g_loss: -0.0499 
+psnr: 14.2406, best_psnr: 19.5988 
+ssim: 0.3011, best_ssim: 0.3886 
+
+12it [00:06,  1.96it/s]
+epoch: 173, d_loss: -0.0901, g_loss: -0.5318 
+psnr: 14.7337, best_psnr: 19.5988 
+ssim: 0.2955, best_ssim: 0.3886 
+
+12it [00:06,  1.93it/s]
+epoch: 174, d_loss: -0.0299, g_loss: 0.0725 
+psnr: 16.5041, best_psnr: 19.5988 
+ssim: 0.3482, best_ssim: 0.3886 
+
+12it [00:06,  1.96it/s]
+epoch: 175, d_loss: -0.0241, g_loss: 0.2480 
+psnr: 15.7922, best_psnr: 19.5988 
+ssim: 0.3483, best_ssim: 0.3886 
+
+12it [00:06,  1.88it/s]
+epoch: 176, d_loss: -0.0300, g_loss: 0.2925 
+psnr: 15.8007, best_psnr: 19.5988 
+ssim: 0.3111, best_ssim: 0.3886 
+
+12it [00:05,  2.00it/s]
+epoch: 177, d_loss: -0.0007, g_loss: 0.4730 
+psnr: 15.9372, best_psnr: 19.5988 
+ssim: 0.3371, best_ssim: 0.3886 
+
+12it [00:06,  1.96it/s]
+epoch: 178, d_loss: -0.0394, g_loss: 0.4998 
+psnr: 16.7810, best_psnr: 19.5988 
+ssim: 0.3160, best_ssim: 0.3886 
+
+12it [00:06,  1.91it/s]
+epoch: 179, d_loss: -0.0656, g_loss: -0.3992 
+psnr: 12.9090, best_psnr: 19.5988 
+ssim: 0.1947, best_ssim: 0.3886 
+
+12it [00:06,  1.97it/s]
+epoch: 180, d_loss: 0.0034, g_loss: 0.3165 
+psnr: 15.1460, best_psnr: 19.5988 
+ssim: 0.2478, best_ssim: 0.3886 
+
+12it [00:06,  1.98it/s]
+epoch: 181, d_loss: -0.0579, g_loss: -0.0548 
+psnr: 15.4659, best_psnr: 19.5988 
+ssim: 0.3203, best_ssim: 0.3886 
+
+12it [00:06,  1.97it/s]
+epoch: 182, d_loss: -0.0566, g_loss: 0.4535 
+psnr: 15.7388, best_psnr: 19.5988 
+ssim: 0.3755, best_ssim: 0.3886 
+
+12it [00:05,  2.04it/s]
+epoch: 183, d_loss: -0.0098, g_loss: 0.4279 
+psnr: 14.3549, best_psnr: 19.5988 
+ssim: 0.3093, best_ssim: 0.3886 
+
+12it [00:06,  1.99it/s]
+epoch: 184, d_loss: -0.0362, g_loss: 0.0370 
+psnr: 13.8846, best_psnr: 19.5988 
+ssim: 0.3060, best_ssim: 0.3886 
+
+12it [00:06,  1.88it/s]
+epoch: 185, d_loss: -0.0572, g_loss: -0.3322 
+psnr: 14.9492, best_psnr: 19.5988 
+ssim: 0.2985, best_ssim: 0.3886 
+
+12it [00:06,  1.94it/s]
+epoch: 186, d_loss: -0.0171, g_loss: -0.3287 
+psnr: 14.8835, best_psnr: 19.5988 
+ssim: 0.2568, best_ssim: 0.3886 
+
+12it [00:06,  1.96it/s]
+epoch: 187, d_loss: -0.0082, g_loss: -0.5304 
+psnr: 14.9769, best_psnr: 19.5988 
+ssim: 0.2341, best_ssim: 0.3886 
+
+12it [00:06,  1.94it/s]
+epoch: 188, d_loss: -0.0329, g_loss: 0.2055 
+psnr: 16.2305, best_psnr: 19.5988 
+ssim: 0.2585, best_ssim: 0.3886 
+
+12it [00:06,  1.81it/s]
+epoch: 189, d_loss: -0.0246, g_loss: 0.4848 
+psnr: 14.9220, best_psnr: 19.5988 
+ssim: 0.2391, best_ssim: 0.3886 
+
+12it [00:06,  1.81it/s]
+epoch: 190, d_loss: 0.0018, g_loss: 0.5420 
+psnr: 15.7628, best_psnr: 19.5988 
+ssim: 0.2813, best_ssim: 0.3886 
+
+12it [00:06,  1.75it/s]
+epoch: 191, d_loss: -0.0604, g_loss: -0.5124 
+psnr: 14.6204, best_psnr: 19.5988 
+ssim: 0.2825, best_ssim: 0.3886 
+
+12it [00:06,  1.78it/s]
+epoch: 192, d_loss: 0.0192, g_loss: 0.1989 
+psnr: 14.3058, best_psnr: 19.5988 
+ssim: 0.2479, best_ssim: 0.3886 
+
+12it [00:06,  1.74it/s]
+epoch: 193, d_loss: -0.0472, g_loss: 0.3068 
+psnr: 15.5304, best_psnr: 19.5988 
+ssim: 0.3137, best_ssim: 0.3886 
+
+12it [00:07,  1.69it/s]
+epoch: 194, d_loss: -0.0316, g_loss: 0.1670 
+psnr: 15.2480, best_psnr: 19.5988 
+ssim: 0.2750, best_ssim: 0.3886 
+
+12it [00:07,  1.66it/s]
+epoch: 195, d_loss: -0.0548, g_loss: 0.2515 
+psnr: 15.1080, best_psnr: 19.5988 
+ssim: 0.3320, best_ssim: 0.3886 
+
+12it [00:06,  1.75it/s]
+epoch: 196, d_loss: -0.0227, g_loss: 0.1133 
+psnr: 16.3700, best_psnr: 19.5988 
+ssim: 0.3674, best_ssim: 0.3886 
+
+12it [00:06,  1.72it/s]
+epoch: 197, d_loss: -0.0017, g_loss: 0.0085 
+psnr: 14.4426, best_psnr: 19.5988 
+ssim: 0.2842, best_ssim: 0.3886 
+
+12it [00:06,  1.75it/s]
+epoch: 198, d_loss: -0.0119, g_loss: 0.0145 
+psnr: 14.1460, best_psnr: 19.5988 
+ssim: 0.2922, best_ssim: 0.3886 
+
+12it [00:06,  1.79it/s]
+epoch: 199, d_loss: -0.0174, g_loss: -0.4586 
+psnr: 16.0163, best_psnr: 19.5988 
+ssim: 0.3199, best_ssim: 0.3886 
