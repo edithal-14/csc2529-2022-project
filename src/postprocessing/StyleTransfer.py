@@ -1,4 +1,3 @@
-import matplotlib.pyplot as plt
 import torch
 import torch.cuda
 import torch.nn as nn
@@ -6,7 +5,7 @@ import torch.optim as optim
 import torchvision.models as models
 import torchvision.transforms as transforms
 from PIL import Image
-from matplotlib.ticker import MaxNLocator
+from skimage.metrics import peak_signal_noise_ratio as psnr
 from torchvision.utils import save_image
 
 
@@ -40,10 +39,10 @@ def calculate_content_loss(generated_features, content_features):
 def calculate_style_loss(generated, style):
     batch_size, channel, height, width = generated.shape
 
-    G = torch.mm(generated.view(channel, height * width), generated.view(channel, height * width).t())
+    gram = torch.mm(generated.view(channel, height * width), generated.view(channel, height * width).t())
     A = torch.mm(style.view(channel, height * width), style.view(channel, height * width).t())
 
-    style_l = torch.mean((G - A) ** 2)
+    style_l = torch.mean((gram - A) ** 2)
     return style_l
 
 
@@ -59,60 +58,89 @@ def calculate_loss(generated_features, content_features, style_features, alpha, 
 
 def image_loader(path, device):
     image = Image.open(path)
-
-    loader = transforms.Compose([transforms.Resize((512, 512)), transforms.ToTensor()])
-    # Add an extra dimension at 0th index for batch size
+    loader = transforms.Compose([transforms.Resize((64, 64)), transforms.ToTensor()])
+    # fake batch dimension required to fit network's input dimensions
     image = loader(image).unsqueeze(0)
     return image.to(device, torch.float)
 
 
-def perform_style_transfer(content, style):
+def create_model():
     device = torch.device("cuda" if (torch.cuda.is_available()) else 'cpu')
     model = VGG().to(device).eval()
 
-    content_image = image_loader(content, device)
-    style_image = image_loader(style, device)
-    generated_image = content_image.clone().requires_grad_(True)
-
-    # Hyperparameters
-    epochs = 2000
-    lr = 0.004
-    alpha = 5  # weighting coefficient of content loss
-    beta = 100  # weighting coefficient of style loss
-
-    # Updates the pixels of the generated image not the model parameter
-    optimizer = optim.Adam([generated_image], lr=lr)
-    loss = []
-
-    for epoch in range(1, epochs + 1):
-
-        generated_features = model(generated_image)
-        content_features = model(content_image)
-        style_features = model(style_image)
-
-        # iterating over the activation of each layer and calculate the loss and
-        # add it to the content and the style loss
-        total_loss = calculate_loss(generated_features, content_features, style_features, alpha, beta)
-
-        # optimize the pixel values of the generated image and backpropagate the loss
-        optimizer.zero_grad()
-        total_loss.backward()  # Backpropagate the total loss
-        optimizer.step()  # Update the pixel values of the generated image
-
-        if epoch % 50 == 0:
-            print("For", epoch, "epochs, total loss is:", str(total_loss.item()))
-            loss.append(total_loss.item())
-            save_image(generated_image, "generated_image_adam.png")
-
-    plt.rcParams["figure.figsize"] = [8, 4]
-
-    ax = plt.figure().gca()
-    ax.xaxis.set_major_locator(MaxNLocator(integer=True))
-
-    plt.plot(range(1, epochs + 1, 50), loss)
-    plt.show()
+    return device, model
 
 
-content_img = 'content.jpg'  # content: aggregated image from GANs
-style_img = 'style.jpg'  # base MRI image
-perform_style_transfer(content_img, style_img)
+def perform_style_transfer(model, device, content_imgs, style_img, image_num, epochs=800, alpha=5, beta=100,
+                           optimizer_betas=(0.9, 0.999)):
+    style_image = image_loader(style_img, device)
+
+    psnr_f = open("psnr.txt", "a")
+    total_psnr = 0
+
+    for img in content_imgs:
+        content_image = image_loader(img, device)
+        generated_image = content_image.clone().requires_grad_(True)
+
+        # Updates the pixels of the generated image not the model parameter
+        optimizer = optim.Adam([generated_image], betas=optimizer_betas)  # (0.5, 0.999)
+
+        for epoch in range(1, epochs + 1):
+            generated_features = model(generated_image)
+            content_features = model(content_image)
+            style_features = model(style_image)
+
+            # iterating over the activation of each layer and calculate the loss and
+            # add it to the content and the style loss
+            total_loss = calculate_loss(generated_features, content_features, style_features, alpha, beta)
+
+            # optimize the pixel values of the generated image and backpropagate the loss
+            optimizer.zero_grad()
+            total_loss.backward()  # Backpropagate the total loss
+            optimizer.step()  # Update the pixel values of the generated image
+
+        psnr_value = psnr(style_image.cpu().detach().numpy(), generated_image.cpu().detach().numpy())
+        hyperparamters = str(epochs) + ',' + str(alpha) + ',' + str(beta)
+        psnr_result = '\n' + str(psnr_value) + ',' + hyperparamters
+
+        psnr_f.write(str(psnr_result))
+
+        total_psnr += psnr_value
+
+        file_name = str(img_num) + ' - epoch ' + str(epochs) + ' a ' + str(alpha) + ' b ' + str(beta)
+
+        save_image(generated_image, 'generatedimages/' + file_name + '.png')
+
+    psnr_f.close()
+
+    return total_psnr / len(content_imgs)
+
+
+device, model = create_model()
+
+epochs_num = [2000]
+alphas = [5]
+betas = [100]
+samples_num = 10
+
+f = open("mean psnr.txt", "a")
+
+for e in epochs_num:
+    for a in alphas:
+        for b in betas:
+            psnr_val = 0
+            for img_num in range(1, samples_num + 1):
+                content_img_filename = ['wgan_gp/t1/fake/' + str(img_num) + '.png']
+                style_img_filename = 'wgan_gp/t1/real/' + str(img_num) + '.png'
+
+                psnr_val += perform_style_transfer(model, device, content_img_filename, style_img_filename,
+                                                   img_num,
+                                                   epochs=e,
+                                                   alpha=a, beta=b)
+
+            mean_psnr = psnr_val / samples_num
+            hyperparameters = str(e) + ',' + str(a) + ',' + str(b)
+            result = '\n' + str(mean_psnr) + ',' + hyperparameters
+            f.write(str(result))
+
+            print("Mean PSNR values is", mean_psnr, "using: epoch =", str(e) + ', alpha =', str(a) + ', beta =', str(b))

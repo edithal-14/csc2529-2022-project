@@ -54,7 +54,7 @@ def calculate_gram_matrix(img):
 
 def image_loader(path, device):
     image = Image.open(path)
-    loader = transforms.Compose([transforms.Resize((512, 512)), transforms.ToTensor()])
+    loader = transforms.Compose([transforms.Resize((64, 64)), transforms.ToTensor()])
     # Add an extra dimension at 0th index for batch size
     image = loader(image).unsqueeze(0)
     return image.to(device, torch.float)
@@ -110,21 +110,23 @@ def calculate_losses(cnn, normalization_mean, normalization_std, style_image, co
 
     return model, style_losses, content_losses
 
-
-def perform_style_transfer(content_image, style_image,
-                           epochs=300, style_weight=1000000, content_weight=5):
+def create_model():
     device = torch.device("cuda" if (torch.cuda.is_available()) else 'cpu')
-    cnn = models.vgg19(pretrained=True).features.to(device).eval()
+    model = models.vgg19(pretrained=True).features.to(device).eval()
+
+    return device, model
+
+def perform_style_transfer(model, device, content_image, style_image, img_num,
+                           epochs=300, style_weight=1000000, content_weight=5):
 
     content = image_loader(content_image, device)
     style = image_loader(style_image, device)
     generated = content.clone()
 
-    # TODO: update mean and std values
     normalization_mean = torch.tensor([0.485, 0.456, 0.406]).to(device)
     normalization_std = torch.tensor([0.229, 0.224, 0.225]).to(device)
 
-    model, style_losses, content_losses = calculate_losses(cnn, normalization_mean,
+    model, style_losses, content_losses = calculate_losses(model, normalization_mean,
                                                            normalization_std, style, content, device)
     optimizer = optim.LBFGS([generated.requires_grad_()])
 
@@ -156,7 +158,9 @@ def perform_style_transfer(content_image, style_image,
                 losses.append(loss.item())
                 print('\nFor epoch', epoch[0], 'Style Loss:', style_score.item(),
                       'Content Loss:', content_score.item())
-                save_image(generated, "generated_image_lbfgs.png")
+
+                file_name = str(img_num) + ' - epoch ' + str(epochs) + ' a ' + str(content_weight) + ' b ' + str(style_weight)
+                save_image(generated, 'generatedimageslbfgs/' + file_name + '.png')
 
             return style_score + content_score
 
@@ -175,7 +179,21 @@ def perform_style_transfer(content_image, style_image,
     return generated
 
 
-content_img = 'content.jpg'  # content: aggregated image from GANs
-style_img = 'style.jpg'  # base MRI image
+epochs_num = [500]
+content_weights = [5]
+style_weights = [1000, 100]
+samples_num = 10
 
-output = perform_style_transfer(content_img, style_img)
+for e in epochs_num:
+    for a in content_weights:
+        for b in style_weights:
+            for img_num in range(1, samples_num + 1):
+                content_img_filename = 'wgan_gp/t1/fake/' + str(img_num) + '.png'
+                style_img_filename = 'wgan_gp/t1/real/' + str(img_num) + '.png'
+
+                device, model = create_model()
+
+                perform_style_transfer(model, device, content_img_filename, style_img_filename,
+                                                   img_num,
+                                                   epochs=e,
+                                                   style_weight=b, content_weight=a)
