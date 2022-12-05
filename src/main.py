@@ -45,6 +45,12 @@ def main(bt_class):
     # Create the dataset
     dataset = BraTSDataset(image_paths, tf)
 
+    ############################################################
+    #################### Save Real Images ######################
+    ############################################################
+
+    dataset.save(bt_class=bt_class.lower())
+
     # Create the dataloader
     dataloader = DataLoader(dataset, batch_size=cfg.BATCH_SIZE,
                             shuffle=True, num_workers=cfg.NUM_WORKERS)
@@ -56,12 +62,6 @@ def main(bt_class):
     plt.title(f"Training Images ({bt_class})")
     img = np.transpose(vutils.make_grid(real_batch.to(cfg.DEVICE), normalize=True).cpu().numpy(),(1,2,0))
     plt.imsave(f"output/training/{cfg.WINIT}_winit/unet_samplereal_{bt_class}.png", img)
-
-    ############################################################
-    #################### Save Real Images ######################
-    ############################################################
-
-    dataset.save(bt_class=bt_class.lower())
 
     ############################################################
     ############# Init Generator and weights ###################
