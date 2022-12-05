@@ -38,6 +38,8 @@ class GANTrainer():
         self.img_list = []
         self.G_losses = []
         self.D_losses = []
+        self.psnr_hist = []
+        self.ssim_hist = []
         self.iters = 0
         self.best_g_psnr = 0
         self.best_g_ssim = 0
@@ -132,6 +134,11 @@ class GANTrainer():
                 real = real.cpu().numpy()
                 mpsnr = self.getBatchMeanPSNR(real,fake)
                 mssim = self.getBatchMeanSSIM(real,fake)
+
+                # Save best model based on PSNR every iteration
+                self.psnr_hist.append(mpsnr)
+                self.ssim_hist.append(mssim)
+
                 # Currently, updating based on PSNR values
                 if mpsnr > self.best_g_psnr:
                     self.best_g_state = self.netG.state_dict()
