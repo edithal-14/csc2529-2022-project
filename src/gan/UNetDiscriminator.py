@@ -79,8 +79,8 @@ class Decoder(nn.Module):
 
 # UNet Class
 class UNetDiscriminator(nn.Module):
-	def __init__(self, enc_channels=(1, 16, 32, 64),
-		 dec_channels=(64, 32, 16),
+	def __init__(self, enc_channels=(1, 32, 64, 128),
+		 dec_channels=(128, 64, 32),
 		 nb_classes=1,
 		 ns=0.01):
 		super().__init__()
@@ -92,7 +92,7 @@ class UNetDiscriminator(nn.Module):
 		# initialize the regression head and store the class variables
 		self.head = nn.Conv2d(in_channels=dec_channels[-1],
 								out_channels=nb_classes,
-								kernel_size=88,
+								kernel_size=24,
 								stride=1,
 								padding=0,
 								bias=False)

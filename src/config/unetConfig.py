@@ -52,14 +52,14 @@ BT_CLASS = "T1"
 ############################################################
 
 # Size of latent vector z (input to generator)
-LATENT_SZ = 300 # 300 is good
+LATENT_SZ = 128 # 300 is good
 # Size of feature maps for generator
-NGF = 64
+NGF = 32
 # Number of channels in the output
 NGC = 1
 
 # Define learning rate, beta1
-GLR = 1e-3
+GLR = 2e-4
 GBETA1 = 0.5
 
 
@@ -70,7 +70,7 @@ GBETA1 = 0.5
 # Define the number of channels in the input, size of feature maps
 # number of classes and number of levels in the U-Net model
 NDC = 1
-NDF = 64
+NDF = 32
 NUM_CLASSES = 1
 NUM_LEVELS = 4
 
@@ -86,8 +86,8 @@ NEG_SLOPE = 0.2
 ############################################################
 
 # Initialize umber of epochs to train for, and batch size
-NUM_EPOCHS = 15 # 15 seems good!
-BATCH_SIZE = 64
+NUM_EPOCHS = 1000 # 15 seems good!
+BATCH_SIZE = 128
 
 # Weigth initialization
 WINIT = "norm"
@@ -97,5 +97,5 @@ WINIT = "norm"
 ############################################################
 
 # define the input image dimensions
-INPUT_IMAGE_WIDTH = 128
-INPUT_IMAGE_HEIGHT = 128
+INPUT_IMAGE_WIDTH = 64
+INPUT_IMAGE_HEIGHT = 64
