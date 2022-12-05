@@ -28,4 +28,4 @@ def plot_train_metrics(G_losses,D_losses):
     plt.xlabel("iterations")
     plt.ylabel("Loss")
     plt.legend()
-    plt.show()
+    # plt.show()

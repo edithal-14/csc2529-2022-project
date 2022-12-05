@@ -49,7 +49,7 @@ def main(bt_class):
     #################### Save Real Images ######################
     ############################################################
 
-    dataset.save(bt_class=bt_class.lower())
+    # dataset.save(bt_class=bt_class.lower())
 
     # Create the dataloader
     dataloader = DataLoader(dataset, batch_size=cfg.BATCH_SIZE,
@@ -117,6 +117,24 @@ def main(bt_class):
             DLR==>{cfg.DLR}\t\
             BEST_PSNR==>{trainer.best_g_psnr:.4f}\t\
             BEST_SSIM: {trainer.best_g_ssim:.4f}")
+    
+    # Save training loss curve
+    plot_train_metrics(trainer.G_losses, trainer.D_losses)
+    plt.savefig(f'output/training/{cfg.WINIT}_winit/unet_{bt_class}_Train_Loss.png', bbox_inches='tight')
+    
+    # Save training PSNR curve
+    plt.figure(figsize=(10,5))
+    plt.title("PSNR During Training")
+    plt.plot(trainer.psnr_hist, label='psnr')
+    plt.legend()
+    plt.savefig(f'output/training/{cfg.WINIT}_winit/unet_{bt_class}_Train_PSNR.png', bbox_inches='tight')
+
+    # Save training SSIM curve
+    plt.figure(figsize=(10,5))
+    plt.title("SSIM During Training")
+    plt.plot(trainer.ssim_hist, label='ssim')
+    plt.legend()
+    plt.savefig(f'output/training/{cfg.WINIT}_winit/unet_{bt_class}_Train_SSIM.png', bbox_inches='tight')
 
     ############################################################
     ################### Save trained model #####################
@@ -128,7 +146,7 @@ def main(bt_class):
     torch.save(trainer.best_g_state, f"models/unetgan/{cfg.WINIT}_winit/unetgan_{bt_class}_Gstate_{param_str}.pth")
 
     ############################################################
-    ############ Plot Sample Synthetic Images ##################
+    ############ Create Sample Synthetic Images ################
     ############################################################
 
     netGval = UNetGenerator(cfg.LATENT_SZ,cfg.NGF,cfg.NGC).to(cfg.DEVICE)
@@ -154,13 +172,13 @@ def main(bt_class):
     ################ Save Synthetic Images #####################
     ############################################################
 
-    with torch.no_grad():
-        fixed_noise = torch.randn(369, cfg.LATENT_SZ, 1, 1, device=cfg.DEVICE)
+    # with torch.no_grad():
+    #     fixed_noise = torch.randn(369, cfg.LATENT_SZ, 1, 1, device=cfg.DEVICE)
 
-    fake = netGval(fixed_noise).detach().cpu()
+    # fake = netGval(fixed_noise).detach().cpu()
 
-    for i in range(fake.size(0)):
-            vutils.save_image(fake[i, :, :, :], f'output/unetgan/{cfg.WINIT}_winit/{bt_class.lower()}/fake/{i}.png')
+    # for i in range(fake.size(0)):
+    #         vutils.save_image(fake[i, :, :, :], f'output/unetgan/{cfg.WINIT}_winit/{bt_class.lower()}/fake/{i}.png')
 
 if __name__ == "__main__":
     for bt_class in cfg.DSET_CPATHS:

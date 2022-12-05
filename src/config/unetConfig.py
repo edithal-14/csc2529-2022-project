@@ -12,10 +12,10 @@ DSET_BASEPATH = os.path.join(SRC_PATH, "data/MICCAI_BraTS2020/train")
 
 # Define the path to the images
 DSET_CPATHS = {
-    "FLAIR" : os.path.join(DSET_BASEPATH, "flair"),
+    # "FLAIR" : os.path.join(DSET_BASEPATH, "flair"),
     "T1CE" : os.path.join(DSET_BASEPATH, "t1ce"),
-    "T1" : os.path.join(DSET_BASEPATH, "t1"),
-    "T2" : os.path.join(DSET_BASEPATH, "t2")
+    # "T1" : os.path.join(DSET_BASEPATH, "t1"),
+    # "T2" : os.path.join(DSET_BASEPATH, "t2")
 }
 
 # Define the path to the base output directory
@@ -72,7 +72,7 @@ GBETA1 = 0.5
 NDC = 1
 NDF = 32
 NUM_CLASSES = 1
-NUM_LEVELS = 4
+NUM_LEVELS = 3
 
 # Define learning rate, beta1
 DLR = 2e-4
@@ -90,7 +90,7 @@ NUM_EPOCHS = 1000 # 15 seems good!
 BATCH_SIZE = 128
 
 # Weigth initialization
-WINIT = "norm"
+WINIT = "ortho"
 
 ############################################################
 ################### IMAGE TRANSFORMS #######################
