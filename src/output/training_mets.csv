@@ -1,0 +1,4 @@
+Norm Weight init::T1::	            NUM_EPOCHS==>1000	            BATCH_SIZE==128	            LATENT_SIZE==>128	            GLR==>0.0002	            DLR==>0.0002	            BEST_PSNR==>17.9237	            BEST_SSIM: 0.5450
+Norm Weight init::T1CE::	            NUM_EPOCHS==>1000	            BATCH_SIZE==128	            LATENT_SIZE==>128	            GLR==>0.0002	            DLR==>0.0002	            BEST_PSNR==>19.8711	            BEST_SSIM: 0.4146
+Norm Weight init::T1::	            NUM_EPOCHS==>1000	            BATCH_SIZE==128	            LATENT_SIZE==>128	            GLR==>0.0002	            DLR==>0.0002	            BEST_PSNR==>18.7386	            BEST_SSIM: 0.7063
+Ortho Weight init::T1CE::	            NUM_EPOCHS==>1000	            BATCH_SIZE==128	            LATENT_SIZE==>128	            GLR==>0.0002	            DLR==>0.0002	            BEST_PSNR==>19.9742	            BEST_SSIM: 0.3212
