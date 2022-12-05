@@ -107,9 +107,10 @@ def perform_style_transfer(model, device, content_imgs, style_img, image_num, ep
 
         total_psnr += psnr_value
 
-        file_name = str(img_num) + ' - epoch ' + str(epochs) + ' a ' + str(alpha) + ' b ' + str(beta)
+        # file_name = str(img_num) + ' - epoch ' + str(epochs) + ' a ' + str(alpha) + ' b ' + str(beta)
+        file_name = str(img_num)
 
-        save_image(generated_image, 'generatedimages/' + file_name + '.png')
+        save_image(generated_image, '../images/t1/wgan_gp_style/' + file_name + '.png')
 
     psnr_f.close()
 
@@ -118,10 +119,10 @@ def perform_style_transfer(model, device, content_imgs, style_img, image_num, ep
 
 device, model = create_model()
 
-epochs_num = [2000]
+epochs_num = [500]
 alphas = [5]
 betas = [100]
-samples_num = 10
+samples_num = 5
 
 f = open("mean psnr.txt", "a")
 
@@ -129,9 +130,9 @@ for e in epochs_num:
     for a in alphas:
         for b in betas:
             psnr_val = 0
-            for img_num in range(1, samples_num + 1):
-                content_img_filename = ['wgan_gp/t1/fake/' + str(img_num) + '.png']
-                style_img_filename = 'wgan_gp/t1/real/' + str(img_num) + '.png'
+            for img_num in range(0, samples_num + 1):
+                content_img_filename = ['../images/t1/wgan_gp/' + str(img_num) + '.png']
+                style_img_filename = '../images/t1/real/' + str(img_num) + '.png'
 
                 psnr_val += perform_style_transfer(model, device, content_img_filename, style_img_filename,
                                                    img_num,
