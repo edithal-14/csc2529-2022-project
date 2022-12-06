@@ -1,0 +1,15 @@
+,Method,T1_PSNR,T1_SSIM,T1CE_PSNR,T1CE_SSIM
+0,DCGAN,21.3,0.69,25.57,0.7
+1,DCGAN+style transfer,29.64,0.87,32.46,0.86
+2,WGAN,19.43,0.63,21.4,0.36
+3,WGAN+style transfer,28.49,0.85,30.74,0.76
+4,WGAN-GP,21.26,0.73,25.14,0.71
+5,WGAN-GP+style transfer,28.88,0.85,32.27,0.85
+6,UNetGAN (normal weight init),15.79,0.63,12.77,0.29
+7,UNetGAN (normal weight init)+style transfer,25.21,0.69,19.9,0.31
+8,UNetGAN (ortho weight init),17.88,0.71,20.4,0.66
+9,UNetGAN (ortho weight init)+style transfer,27.63,0.79,26.91,0.79
+10,AGGrGAN (total agg),19.42,0.67,20.01,0.38
+11,AGGrGAN (total agg)+style transfer,28.08,0.81,28.45,0.6
+12,AGGrGAN (top 3 PSNR),19.12,0.69,22.85,0.58
+13,AGGrGAN (top 3 PSNR)+style transfer,28.62,0.84,31.1,0.8
