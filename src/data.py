@@ -38,8 +38,7 @@ class BraTSDataset(Dataset):
         # return a tuple of the image and its mask
         return image
 
-    def save(self,bt_class=cfg.BT_CLASS.lower()):
-        print(f"Saving real images for {bt_class}")
+    def save(self, store_path):
         for i, impath in enumerate(self.imagePaths):
             # load the Nifti1 image and its mask from disk
             nii_image = nib.load(impath)
@@ -54,4 +53,4 @@ class BraTSDataset(Dataset):
                 # apply the transforms
                 image = self.transforms(image)
 
-            vutils.save_image(image, f'output/unetgan/{cfg.WINIT}_winit/{bt_class}/real/{i}.png')
+            vutils.save_image(image, f'{store_path}/{i}.png')

@@ -1,0 +1,239 @@
+%% iccp20_template.tex
+%% Created by Ayan Chakrabarti from the IEEE bare_jrnl_compsoc.tex file.
+%%
+%% bare_jrnl_compsoc.tex
+%% V1.4b
+%% 2015/08/26
+%% by Michael Shell
+%% See:
+%% http://www.michaelshell.org/
+%% for current contact information.
+%%
+%% This is a skeleton file demonstrating the use of IEEEtran.cls
+%% (requires IEEEtran.cls version 1.8b or later) with an IEEE
+%% Computer Society journal paper.
+%%
+%% Support sites:
+%% http://www.michaelshell.org/tex/ieeetran/
+%% http://www.ctan.org/pkg/ieeetran
+%% and
+%% http://www.ieee.org/
+
+%%*************************************************************************
+%% Legal Notice:
+%% This code is offered as-is without any warranty either expressed or
+%% implied; without even the implied warranty of MERCHANTABILITY or
+%% FITNESS FOR A PARTICULAR PURPOSE! 
+%% User assumes all risk.
+%% In no event shall the IEEE or any contributor to this code be liable for
+%% any damages or losses, including, but not limited to, incidental,
+%% consequential, or any other damages, resulting from the use or misuse
+%% of any information contained here.
+%%
+%% All comments are the opinions of their respective authors and are not
+%% necessarily endorsed by the IEEE.
+%%
+%% This work is distributed under the LaTeX Project Public License (LPPL)
+%% ( http://www.latex-project.org/ ) version 1.3, and may be freely used,
+%% distributed and modified. A copy of the LPPL, version 1.3, is included
+%% in the base LaTeX documentation of all distributions of LaTeX released
+%% 2003/12/01 or later.
+%% Retain all contribution notices and credits.
+%% ** Modified files should be clearly indicated as such, including  **
+%% ** renaming them and changing author support contact information. **
+%%*************************************************************************
+
+
+\documentclass[10pt,journal,compsoc]{IEEEtran}
+\newif\ifpeerreview
+
+%%% Important: for camera ready submissions, replace the following line
+%%% with \peerreviewfalse
+\peerreviewfalse
+
+
+\usepackage[nocompress]{cite}
+\usepackage{url}
+\usepackage{amsmath,amssymb,graphicx}
+
+\usepackage{lipsum} % Only used to generate random text.
+
+
+\usepackage[switch]{lineno}
+
+% Insert your paper ID and information below
+\newcommand{\paperID}{XXXX}
+
+% Enter your paper title below
+\title{ICCP 2020 Paper Template}
+
+% Enter your author information before
+% Note this is only necessary for the camera review. Submissions are anonymized.
+\author{Michael~Shell,
+        and~Jane~Doe% <-this % stops a space
+\IEEEcompsocitemizethanks{\IEEEcompsocthanksitem M. Shell is with the Department
+of Electrical and Computer Engineering, Georgia Institute of Technology, Atlanta,
+GA, 30332.\protect\\
+% note need leading \protect in front of \\ to get a newline within \thanks.
+E-mail: see http://www.michaelshell.org/contact.html
+\IEEEcompsocthanksitem J. Doe is with Anonymous University.}% <-this % stops an unwanted space
+}
+
+
+\begin{document}
+
+\IEEEtitleabstractindextext{%
+\begin{abstract}
+The abstract goes here. \lipsum[1]
+\end{abstract}
+
+\begin{IEEEkeywords} % Enter keywords here
+Computational Photography
+\end{IEEEkeywords}
+}
+
+
+% Make Title
+\ifpeerreview
+\linenumbers \linenumbersep 15pt\relax 
+\author{Paper ID \paperID\IEEEcompsocitemizethanks{\IEEEcompsocthanksitem This paper is under review for ICCP 2020 and the PAMI special issue on computational photography. Do not distribute.}}
+\markboth{Anonymous ICCP 2020 submission ID \paperID}%
+{}
+\fi
+\maketitle
+
+
+
+% The first section title should be wrapped inside a \IEEEraisesectionheading as follows.
+\IEEEraisesectionheading{
+  \section{Introduction}\label{sec:introduction}
+}
+% The very first letter of the paper is a 2 line initial drop letter
+% followed by the rest of the first word in caps.
+% 
+% form to use if the first word consists of a single letter:
+% \IEEEPARstart{A}{demo} file is ....
+% 
+% form to use if you need the single drop letter followed by
+% normal text (unknown if ever used by the IEEE):
+% \IEEEPARstart{A}{}demo file is ....
+% 
+% Some journals put the first two words in caps:
+% \IEEEPARstart{T}{his demo} file is ....
+% 
+% Here we have the typical use of a "T" for an initial drop letter
+% and "HIS" in caps to complete the first word.
+\IEEEPARstart{T}{his} demo file is intended to serve as a ``starter
+file'' for ICCP 2020 submissions produced under
+\LaTeX~\cite{kopka-latex} using IEEEtran.cls version 1.8b and later.
+
+For submissions for review, the paper uses the lineno package which
+might require you to compile under latex twice to get the line numbers
+to align correctly.
+
+\lipsum[2-4]
+
+
+\begin{figure}[!t]
+\centering
+\framebox[\columnwidth]{\parbox{0.9\columnwidth}{~\\~\\~\\~\\~\\}}
+\caption{Example one-column figure.}
+\end{figure}
+
+
+\section{Related Work}
+\lipsum[5-6]
+
+\begin{figure*}[!t]
+\centering
+\framebox[\textwidth]{\parbox{0.9\textwidth}{~\\~\\~\\~\\~\\~\\~\\}}
+\caption{Example two-column figure.}
+\end{figure*}
+
+\section{Proposed Method}
+\lipsum[7]
+
+\subsection{Subsection Heading Here}
+\lipsum[8-9]
+
+\subsubsection{Subsubsection Heading Here}
+\lipsum[10-12]
+
+
+\section{Experimental Results}
+
+\lipsum[13-17]
+
+\begin{table}[!t]
+\renewcommand{\arraystretch}{1.3}
+\caption{An Example of a Table}
+\centering
+\begin{tabular}{c||c|c|c}
+\hline
+One & Two & One & Two\\
+\hline\hline
+Three & Four &Three & Four\\
+\hline
+Three & Four &Three & Four\\
+\hline
+Three & Four &Three & Four\\
+\hline
+\end{tabular}
+\end{table}
+
+
+\section{Conclusion}
+\lipsum[18]
+
+
+
+% Any acknowledgments to only be included in camera ready
+\ifpeerreview \else
+\section*{Acknowledgments}
+The authors would like to thank...
+\fi
+
+\bibliographystyle{IEEEtran}
+\bibliography{references}
+
+
+
+\ifpeerreview \else
+%%%% For the camera ready version, please fill out this
+%%%% biography. Your camera ready should be within a 12 page limit
+%%%% including acknowledgments, references and biography.
+
+% If you have an EPS/PDF photo (graphicx package needed) extra braces are
+% needed around the contents of the optional argument to biography to prevent
+% the LaTeX parser from getting confused when it sees the complicated
+% \includegraphics command within an optional argument. (You could
+% create your own custom macro containing the \includegraphics command
+% to make things simpler here.)
+% \begin{IEEEbiography}[{\includegraphics[width=1in,height=1.25in,clip,keepaspectratio]{mshell}}]{Michael Shell}
+% or if you just want to reserve a space for a photo:
+
+\begin{IEEEbiography}{Michael Shell}
+Biography text here.
+\end{IEEEbiography}
+
+% insert where needed to balance the two columns on the last page with
+% biographies
+%\newpage
+
+% if you will not have a photo at all:
+\begin{IEEEbiographynophoto}{John Doe}
+Biography text here.
+\end{IEEEbiographynophoto}
+
+% You can push biographies down or up by placing
+% a \vfill before or after them. The appropriate
+% use of \vfill depends on what kind of text is
+% on the last page and whether or not the columns
+% are being equalized.
+%\vfill
+
+\fi
+
+\end{document}
+
+
